@@ -1,0 +1,45 @@
+<div fxLayout="column" fxLayoutAlign="start stretch" fxFill class="experience__wrapper">
+  <!-- <mat-card style="padding-bottom: 16px;">
+    <mat-card-header class="experience__wrapper-header">
+      <img mat-card-avatar [src]="'./assets/images/doug_williamson.jpg'" class="experience__wrapper-image">
+      <mat-card-title class="experience__wrapper-title">{{ experience.name }}</mat-card-title>
+      <mat-card-subtitle class="experience__wrapper-subtitle">{{ experience.position }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="experience__wrapper-summary">
+      <p>{{ experience.description }}</p>
+    </mat-card-content>
+  </mat-card> -->
+  <mat-toolbar>
+    <span>Douglas Matthew Williamson</span>
+    <span fxFlex></span>
+    <span>Software Developer</span>
+  </mat-toolbar>
+  <p style="padding: 16px">
+    {{ experience.description }}
+  </p>
+  <mat-accordion class="example-headers-align">
+    <ng-container *ngFor="let job of experience.jobs">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ job.name }}
+          </mat-panel-title>
+          <mat-panel-description>
+            <span>{{ job.dates }}</span>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="experience__wrapper-job-card-content">
+          {{ job.description }}
+        </div>
+        <div class="experience__skills-chips">
+          <mat-chip-list aria-label="Fish selection">
+            <mat-chip>One fish</mat-chip>
+            <mat-chip>Two fish</mat-chip>
+            <mat-chip color="primary" selected>Primary fish</mat-chip>
+            <mat-chip color="accent" selected>Accent fish</mat-chip>
+          </mat-chip-list>
+        </div>
+      </mat-expansion-panel>  
+    </ng-container>
+  </mat-accordion>
+</div>
