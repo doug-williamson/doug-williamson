@@ -1,0 +1,27 @@
+<div fxLayout="column" fxLayoutAlign="start stretch" fxFill class="twitch__wrapper">
+  <mat-card>
+    <mat-card-header class="experience__wrapper-header">
+        <img mat-card-avatar [src]="'./assets/images/rhombus_tv_avatar.png'" class="experience__wrapper-image">
+        <mat-card-title class="experience__wrapper-title">Rhombus TV</mat-card-title>
+        <mat-card-subtitle class="experience__wrapper-subtitle">
+          <button mat-stroked-button color="primary" (click)="goToLink('https://www.mixer.com/Rhombus_TV')">
+            Mixer
+          </button>
+        </mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+  <mat-list class="biography__list" fxFlex>
+    <h3 matSubheader>About Rhombus TV</h3>
+    <mat-list-item>
+      <p>
+        Rhombus TV is my streaming home for all things coding, video games, sports and a variety of content.
+      </p>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <p>
+        Stay tuned for more information.
+      </p>
+    </mat-list-item>
+  </mat-list>
+</div>
