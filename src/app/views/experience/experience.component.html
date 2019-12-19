@@ -19,25 +19,28 @@
   </p>
   <mat-accordion class="example-headers-align">
     <ng-container *ngFor="let job of experience.jobs">
-      <mat-expansion-panel>
+      <mat-expansion-panel [expanded]="step === job.id" (opened)="setStep(job.id)">
         <mat-expansion-panel-header>
           <mat-panel-title>
             {{ job.name }}
           </mat-panel-title>
-          <mat-panel-description>
+          <!-- <mat-panel-description>
             <span>{{ job.dates }}</span>
-          </mat-panel-description>
+          </mat-panel-description> -->
         </mat-expansion-panel-header>
+        <span>{{ job.dates }}</span>
         <div class="experience__wrapper-job-card-content">
           {{ job.description }}
         </div>
-        <div class="experience__skills-chips">
-          <mat-chip-list aria-label="Fish selection">
-            <mat-chip>One fish</mat-chip>
-            <mat-chip>Two fish</mat-chip>
-            <mat-chip color="primary" selected>Primary fish</mat-chip>
-            <mat-chip color="accent" selected>Accent fish</mat-chip>
-          </mat-chip-list>
+        <div fxLayout>
+          <ng-container *ngFor="let attribute of job.attributes">
+            <ng-container *ngIf="attribute.type; else noAttributeType">
+              <button mat-raised-button (click)="goToLink(attribute.url)" color="{{ attribute.type }}">{{ attribute.name }}</button>
+            </ng-container>
+            <ng-template #noAttributeType>
+              <button mat-raised-button (click)="goToLink(attribute.url)">{{ attribute.name }}</button>
+            </ng-template>
+          </ng-container>
         </div>
       </mat-expansion-panel>  
     </ng-container>

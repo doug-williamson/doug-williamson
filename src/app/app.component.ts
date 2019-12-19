@@ -11,7 +11,7 @@ import { RhombusShellThemeService } from '@dougwilliamson/rhombus-shell';
 export class AppComponent implements OnInit{
 
   _isDarkTheme: Observable<boolean>;
-  title = 'Doug Williamson';
+  title = 'doug-williamson';
 
   navItems: RhombusShellNavItem[] = [
     {
