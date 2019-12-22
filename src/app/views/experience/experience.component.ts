@@ -8,10 +8,10 @@ import { Experience } from './experience';
 })
 export class ExperienceComponent implements OnInit {
 
-  step = 1;
+  step = 0;
 
   experience: Experience = {
-    name: 'Douglas M Williamson',
+    name: 'Doug Williamson',
     position: 'Software Developer',
     // tslint:disable-next-line:max-line-length
     description: 'A results-oriented, energetic software developer with concentrations in OOP and SOA methodologies with full-stack experience. Knowledgeable in the primary functions of systems analysis and design, with career exposure in financial, telecommunications, insurance and mortgage industries. An open-minded, dedicated team player with the ability to develop and deliver agile solutions in iterative planning environments. Experienced in mentorship, collaborating with UX and Product Management teams to fill backlogs, plan work and innovate on a regular basis.',
