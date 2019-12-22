@@ -1,18 +1,38 @@
-<div fxLayout="column">
+<div fxLayout="column" fxHide.gt-xs>
     <mat-card>
       <mat-toolbar color="accent">
         <span>Coming Soon</span>
       </mat-toolbar>
       <mat-card-content>
         <mat-list role="list">
-          <mat-list-item><s>Dark Mode</s></mat-list-item>
+          <mat-list-item><s><i>Dark Mode</i></s></mat-list-item>
+          <mat-list-item><s><i>Responsive Design</i></s></mat-list-item>
+          <mat-list-item>Settings</mat-list-item>
           <mat-list-item>Blog Posts</mat-list-item>
           <mat-list-item>Surveys</mat-list-item>
-          <mat-list-item>Responsive Design</mat-list-item>
           <mat-list-item>Internationalization</mat-list-item>
           <mat-list-item>Color Picker</mat-list-item>
-          <mat-list-item>Project Slate</mat-list-item>
+          <mat-list-item>Project TBD</mat-list-item>
         </mat-list>
       </mat-card-content>
     </mat-card>
+</div>
+<div fxHide.xs>
+  <mat-card>
+    <mat-toolbar color="accent">
+      <span>Coming Soon</span>
+    </mat-toolbar>
+    <mat-card-content>
+      <mat-grid-list cols="4" rowHeight="75px">
+        <mat-grid-tile><s><i>Dark Mode</i></s></mat-grid-tile>
+        <mat-grid-tile><s><i>Responsive Design</i></s></mat-grid-tile>
+        <mat-grid-tile>Settings</mat-grid-tile>
+        <mat-grid-tile>Blog Posts</mat-grid-tile>
+        <mat-grid-tile>Surveys</mat-grid-tile>
+        <mat-grid-tile>Internationalization</mat-grid-tile>
+        <mat-grid-tile>Color Picker</mat-grid-tile>
+        <mat-grid-tile>Project TBD</mat-grid-tile>
+      </mat-grid-list>
+    </mat-card-content>
+  </mat-card>
 </div>

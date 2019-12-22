@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BiographyComponent implements OnInit {
 
+  step = 0;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  setStep(index: number) {
+    this.step = index;
   }
 
 }

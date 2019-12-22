@@ -1,38 +1,34 @@
 <div fxLayout="column" fxLayoutAlign="start stretch" fxFill class="experience__wrapper">
-  <!-- <mat-card style="padding-bottom: 16px;">
+  <mat-card>
     <mat-card-header class="experience__wrapper-header">
-      <img mat-card-avatar [src]="'./assets/images/doug_williamson.jpg'" class="experience__wrapper-image">
-      <mat-card-title class="experience__wrapper-title">{{ experience.name }}</mat-card-title>
-      <mat-card-subtitle class="experience__wrapper-subtitle">{{ experience.position }}</mat-card-subtitle>
+        <img mat-card-avatar [src]="'./assets/images/doug_williamson.jpg'" class="experience__wrapper-image">
+        <mat-card-title class="experience__wrapper-title">Douglas Matthew Williamson</mat-card-title>
+        <mat-card-subtitle class="experience__wrapper-subtitle">Software Developer</mat-card-subtitle>
     </mat-card-header>
-    <mat-card-content class="experience__wrapper-summary">
-      <p>{{ experience.description }}</p>
-    </mat-card-content>
-  </mat-card> -->
-  <mat-toolbar>
-    <span>Douglas Matthew Williamson</span>
-    <span fxFlex></span>
-    <span>Software Developer</span>
-  </mat-toolbar>
-  <p style="padding: 16px">
-    {{ experience.description }}
-  </p>
+  </mat-card>
   <mat-accordion class="example-headers-align">
+    <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Overview
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="experience__wrapper-job-card-content">
+        {{ experience.description }}
+      </div>
+    </mat-expansion-panel>
     <ng-container *ngFor="let job of experience.jobs">
       <mat-expansion-panel [expanded]="step === job.id" (opened)="setStep(job.id)">
         <mat-expansion-panel-header>
           <mat-panel-title>
             {{ job.name }}
           </mat-panel-title>
-          <!-- <mat-panel-description>
-            <span>{{ job.dates }}</span>
-          </mat-panel-description> -->
         </mat-expansion-panel-header>
         <span>{{ job.dates }}</span>
         <div class="experience__wrapper-job-card-content">
           {{ job.description }}
         </div>
-        <div fxLayout>
+        <div fxHide.gt-xs fxLayout="column">
           <ng-container *ngFor="let attribute of job.attributes">
             <ng-container *ngIf="attribute.type; else noAttributeType">
               <button mat-raised-button (click)="goToLink(attribute.url)" color="{{ attribute.type }}">{{ attribute.name }}</button>
@@ -42,6 +38,17 @@
             </ng-template>
           </ng-container>
         </div>
+        <div fxHide.xs>
+          <ng-container *ngFor="let attribute of job.attributes">
+            <ng-container *ngIf="attribute.type; else noAttributeType">
+              <button mat-raised-button (click)="goToLink(attribute.url)" color="{{ attribute.type }}">{{ attribute.name }}</button>
+            </ng-container>
+            <ng-template #noAttributeType>
+              <button mat-raised-button (click)="goToLink(attribute.url)">{{ attribute.name }}</button>
+            </ng-template>
+          </ng-container>
+        </div>
+
       </mat-expansion-panel>  
     </ng-container>
   </mat-accordion>

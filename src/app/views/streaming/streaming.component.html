@@ -1,27 +1,22 @@
-<div fxLayout="column" fxLayoutAlign="start stretch" fxFill class="twitch__wrapper">
+<div fxLayout="column" fxLayoutAlign="start stretch" fxFill class="streaming__wrapper">
   <mat-card>
-    <mat-card-header class="experience__wrapper-header">
-        <img mat-card-avatar [src]="'./assets/images/rhombus_tv_avatar.png'" class="experience__wrapper-image">
-        <mat-card-title class="experience__wrapper-title">Rhombus TV</mat-card-title>
-        <mat-card-subtitle class="experience__wrapper-subtitle">
-          <button mat-stroked-button color="primary" (click)="goToLink('https://www.twitch.tv/Rhombus_TV')">
-            Twitch
+    <mat-card-header class="streaming__wrapper-header">
+        <img mat-card-avatar [src]="'./assets/images/rhombus_tv_avatar.png'" class="streaming__wrapper-image">
+        <mat-card-title class="streaming__wrapper-title">
+          Rhombus TV
+        </mat-card-title>
+        <mat-card-subtitle>
+          <button mat-icon-button color="primary" color="primary" (click)="goToLink('https://www.twitch.tv/Rhombus_TV')">
+            <mat-icon>open_in_new</mat-icon>
           </button>
+          Twitch
         </mat-card-subtitle>
     </mat-card-header>
   </mat-card>
-  <mat-list class="biography__list" fxFlex>
-    <h3 matSubheader>About Rhombus TV</h3>
-    <mat-list-item>
-      <p>
-        Rhombus TV is my streaming home for all things coding, video games, sports and a variety of content.
-      </p>
-    </mat-list-item>
-    <mat-divider></mat-divider>
-    <mat-list-item>
-      <p>
-        Stay tuned for more information.
-      </p>
-    </mat-list-item>
-  </mat-list>
+  <div fxLayoutAlign="center stretch" fxFlex>
+    <div fxLayout="column" fxLayoutAlign="center center" fxFlex>
+      <mat-icon >warning</mat-icon>
+      Under Construction...
+    </div>
+  </div>
 </div>

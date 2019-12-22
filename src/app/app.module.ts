@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCardModule, MatListModule, MatIconModule, MatToolbarModule, MatExpansionModule, MatChipsModule, MatDividerModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatListModule, MatIconModule, MatToolbarModule, MatExpansionModule, MatChipsModule, MatDividerModule, MatGridListModule } from '@angular/material';
 import { CommonModule } from '@angular/common';
 import { ExperienceComponent } from './views/experience/experience.component';
 import { HomeComponent } from './views/home/home.component';
@@ -28,14 +28,16 @@ import { BiographyComponent } from './views/biography/biography.component';
     MatListModule,
     MatIconModule,
     MatToolbarModule,
+    MatGridListModule,
 
     RhombusShellModule.forRoot({
       applicationInfo: {
         name: 'Doug Williamson',
-        version: '1.0.0-beta.1',
+        version: '1.0.0-beta.2',
         logoUrl: undefined,
         logoLetters: 'DW',
         twitterUrl: 'https://twitter.com/Rhombus_TV_',
+        changelogUrl: 'https://github.com/doug-williamson/doug-williamson/blob/master/CHANGELOG.md',
       },
     }),
 

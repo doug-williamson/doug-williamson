@@ -2,7 +2,7 @@
     padding: 16px;
 
     mat-card-header {
-        padding-bottom: 24px !important;
+        padding-bottom: 0 !important;
     }
 
     &-header {
@@ -26,7 +26,7 @@
     }
 
     &-summary {
-        padding-bottom: 24px;
+        padding-bottom: 0;
     }
 
     &-job-card {
