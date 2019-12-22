@@ -1,21 +1,12 @@
 .biography__wrapper {
     padding: 16px;
-}
-.biography__list {
-
-}
-
-
-
-.experience__wrapper {
-    padding: 16px;
 
     mat-card-header {
-        padding-bottom: 24px !important;
+        padding-bottom: 0 !important;
     }
 
     &-header {
-        // padding-bottom: 16px;
+        padding-bottom: 16px;
     }
 
     &-image {
@@ -35,7 +26,7 @@
     }
 
     &-summary {
-        padding-bottom: 24px;
+        padding-bottom: 0;
     }
 
     &-job-card {
@@ -63,4 +54,8 @@
 
 .mat-expansion-panel-header-description, .mat-expansion-panel-header-title {
     margin-right: 24px;
+}
+
+button {
+    margin: 0 4px;
 }

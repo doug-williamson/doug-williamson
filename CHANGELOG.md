@@ -2,6 +2,13 @@
 
 All notable changes to Rhombus.Website will be documented in this location. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.0-beta.2"></a>
+# 1.0.0-beta.2 (2019-12-22)
+
+## Features
+* Added responsiveness to Views
+* rhombus-shell: Provided CHANGELOG.md GitHub link
+
 <a name="1.0.0-beta.1"></a>
 # 1.0.0-beta.1 (2019-12-18)
 

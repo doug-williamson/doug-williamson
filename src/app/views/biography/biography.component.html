@@ -1,29 +1,39 @@
 <div class="biography__wrapper" fxLayout="column" fxLayoutAlign="start stretch" fxFill>
     <mat-card>
-        <mat-card-header class="experience__wrapper-header">
-            <img mat-card-avatar [src]="'./assets/images/doug_williamson.jpg'" class="experience__wrapper-image">
-            <mat-card-title class="experience__wrapper-title">Douglas Matthew Williamson</mat-card-title>
-            <mat-card-subtitle class="experience__wrapper-subtitle">Charleston, SC</mat-card-subtitle>
+        <mat-card-header class="biography__wrapper-header">
+            <img mat-card-avatar [src]="'./assets/images/doug_williamson.jpg'" class="biography__wrapper-image">
+            <mat-card-title class="biography__wrapper-title">Douglas Matthew Williamson</mat-card-title>
+            <mat-card-subtitle class="biography__wrapper-subtitle">Charleston, SC</mat-card-subtitle>
         </mat-card-header>
     </mat-card>
-    <mat-list class="biography__list" fxFlex>
-        <h3 matSubheader>About Me</h3>
-        <mat-list-item>
-            <p>
-            I'm a software developer, in the Information Technology industry for 15 years, working on a wide variety of Software-as-a-Service (SaaS) products covering multiple client/server programming architectures.
-            </p>
-        </mat-list-item>
-        <mat-list-item>
-            <p>
-            While my primary emphasis has been web programming, as a developer, I'm beginning transitions that emphasize Mentorship, Management and Product Evangelism.
-            </p>
-        </mat-list-item>
-        <h3 matSubheader>About This Website</h3>
-        <mat-list-item>
-            <p>
-            This website is built on Google's Angular platform, utilizing a home-grown library of reuseable components and services communicating with Firebase.
-            </p>
-        </mat-list-item>
-    </mat-list>
+    <mat-accordion class="example-headers-align">
+        <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    About Me
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="experience__wrapper-job-card-content">
+                <p>
+                    I'm a software developer, in the Information Technology industry for 15 years, working on a wide variety of Software-as-a-Service (SaaS) products covering multiple client/server programming architectures.
+                </p>
+                <p>
+                    While my primary emphasis has been web programming, as a developer, I'm beginning transitions that emphasize Mentorship, Management and Product Evangelism.
+                </p>
+            </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    About This Website
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="experience__wrapper-job-card-content">
+              <p>
+                This website is built on Google's Angular platform, utilizing a home-grown library of reuseable components and services communicating with Firebase.
+              </p>
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
 </div>
     
