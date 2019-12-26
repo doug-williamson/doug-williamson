@@ -2,6 +2,12 @@
 
 All notable changes to Rhombus.Website will be documented in this location. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.0-beta.3"></a>
+# 1.0.0-beta.3 (2019-12-25)
+
+# Features
+* Consumed rhombus-shell beta.16, get Settings view with Theme Mode (Light/Dark)
+
 <a name="1.0.0-beta.2"></a>
 # 1.0.0-beta.2 (2019-12-22)
 
