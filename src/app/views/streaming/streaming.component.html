@@ -1,5 +1,5 @@
 <div fxLayout="column" fxLayoutAlign="start stretch" fxFill class="streaming__wrapper">
-  <mat-card>
+  <!-- <mat-card>
     <mat-card-header class="streaming__wrapper-header">
         <img mat-card-avatar [src]="'./assets/images/rhombus_tv_avatar.png'" class="streaming__wrapper-image">
         <mat-card-title class="streaming__wrapper-title">
@@ -12,11 +12,13 @@
           Twitch
         </mat-card-subtitle>
     </mat-card-header>
-  </mat-card>
-  <div fxLayoutAlign="center stretch" fxFlex>
-    <div fxLayout="column" fxLayoutAlign="center center" fxFlex>
-      <mat-icon >warning</mat-icon>
-      Under Construction...
-    </div>
+  </mat-card> -->
+  <div class="streaming__iframe" fxLayoutAlign="center stretch" fxFlex>
+    <iframe fxFlex
+      src="https://player.twitch.tv/?channel=rhombus_tv&muted=true"
+      frameborder="0"
+      scrolling="no"
+      allowfullscreen="true">
+    </iframe>
   </div>
 </div>
