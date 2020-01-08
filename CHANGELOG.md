@@ -1,6 +1,16 @@
 # Change Log
 
-All notable changes to Rhombus.Website will be documented in this location. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to <doug-williamson> will be documented in this location. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+# URL
+
+https://douglas-williamson.firebaseapp.com
+
+<a name="1.0.0-beta.3"></a>
+# 1.0.0-beta.3 (2019-12-25)
+
+# Features
+* Consumed rhombus-shell beta.16, get Settings view with Theme Mode (Light/Dark)
 
 # URL
 
