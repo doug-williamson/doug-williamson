@@ -12,6 +12,10 @@ import { StreamingComponent } from './views/streaming/streaming.component';
 import { AppRoutingModule } from './app.routing';
 import { ComingSoonComponent } from './views/home/coming-soon/coming-soon.component';
 import { BiographyComponent } from './views/biography/biography.component';
+import { environment } from 'src/environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   imports: [
@@ -30,14 +34,19 @@ import { BiographyComponent } from './views/biography/biography.component';
     MatToolbarModule,
     MatGridListModule,
 
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+
     RhombusShellModule.forRoot({
       applicationInfo: {
         name: 'Doug Williamson',
-        version: '1.0.0-beta.3',
+        version: '1.0.0-beta.4',
         logoUrl: undefined,
         logoLetters: 'DW',
         twitterUrl: 'https://twitter.com/Rhombus_TV_',
         changelogUrl: 'https://github.com/doug-williamson/doug-williamson/blob/master/CHANGELOG.md',
+        donateUrl: 'https://www.paypal.me/dmwilliamson08',
+        firebaseConfig: undefined,
       },
     }),
 
@@ -51,7 +60,9 @@ import { BiographyComponent } from './views/biography/biography.component';
     ComingSoonComponent,
     BiographyComponent,
   ],
-  providers: [],
+  providers: [
+    AngularFirestore,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

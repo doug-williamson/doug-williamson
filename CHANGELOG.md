@@ -1,6 +1,6 @@
 # Change Log
 
-All notable changes to Rhombus.Website will be documented in this location. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to <doug-williamson> will be documented in this location. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 # URL
 
