@@ -6,6 +6,13 @@ All notable changes to <doug-williamson> will be documented in this location. Se
 
 https://douglas-williamson.firebaseapp.com
 
+<a name="1.0.0-beta.4"></a>
+# 1.0.0-beta.4 (2020-01-08)
+
+### Features
+* rhombus-shell: consumed beta.18, get Donate dialog
+* Streaming: added Twitch iFrame
+
 <a name="1.0.0-beta.3"></a>
 # 1.0.0-beta.3 (2019-12-25)
 
