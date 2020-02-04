@@ -40,7 +40,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
     RhombusShellModule.forRoot({
       applicationInfo: {
         name: 'Doug Williamson',
-        version: '1.0.0-beta.4',
+        version: '1.0.0-beta.5',
         logoUrl: undefined,
         logoLetters: 'DW',
         twitterUrl: 'https://twitter.com/Rhombus_TV_',
