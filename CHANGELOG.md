@@ -4,7 +4,13 @@ All notable changes to doug-williamson will be documented in this location. See 
 
 # URL
 
-https://douglas-williamson.firebaseapp.com
+https://dougwilliamson.space
+
+<a name="1.0.0-beta.5"></a>
+# 1.0.0-beta.5 (2020-02-03)
+
+### Features
+* rhombus-shell: consumed beta.19, updated branding for dougwilliamson.space
 
 <a name="1.0.0-beta.4"></a>
 # 1.0.0-beta.4 (2020-01-08)
