@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MediaObserver } from '@angular/flex-layout';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  step = 0;
+
+  constructor(public media: MediaObserver) { }
 
   ngOnInit() {
+  }
+
+  setStep(index: number) {
+    this.step = index;
+  }
+
+  goToLink(url: string) {
+    window.open(url, '_blank');
   }
 
 }

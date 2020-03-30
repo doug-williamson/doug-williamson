@@ -1,0 +1,24 @@
+<!-- <div fxFlex>
+    <mat-card fxFlex>
+        <mat-card-title>Latest News</mat-card-title>
+        <mat-card-content>
+            <mat-list>
+                <ng-container *ngFor="let item of items">
+                    <mat-list-item>
+                        <mat-icon mat-list-icon>event_note</mat-icon>
+                        <div mat-line>{{ item.name }}</div>
+                        <div mat-line>{{ item.date | date }}</div>
+                    </mat-list-item>
+                </ng-container>
+            </mat-list>
+      </mat-card-content>
+    </mat-card>
+</div> -->
+<mat-list>
+    <ng-container *ngFor="let item of items">
+        <mat-list-item>
+            <div mat-line>{{ item.name }}</div>
+            <div mat-line>{{ item.date | date }}</div>
+        </mat-list-item>
+    </ng-container>
+</mat-list>
