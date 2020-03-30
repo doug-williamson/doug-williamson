@@ -1,6 +1,6 @@
 {
   "name": "doug-williamson",
-  "version": "1.0.0-beta.4",
+  "version": "1.0.0-beta.7",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

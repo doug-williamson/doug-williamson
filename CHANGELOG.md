@@ -12,7 +12,8 @@ https://dougwilliamson.space
 ### Features
 * Added Latest News feature to Home view
 * Made Home view, Latest News and Coming Soon components responsive
-* Added #coding Discord links to Welcome section
+* Added #coding Discord link to Home view (Welcome)
+* Added #general Discord link to Streaming view
 
 <a name="1.0.0-beta.6"></a>
 # 1.0.0-beta.6 (2020-03-26)
