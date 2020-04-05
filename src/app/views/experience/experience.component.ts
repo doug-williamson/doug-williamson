@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Experience } from './experience';
+import { MediaObserver } from '@angular/flex-layout';
 
 @Component({
   selector: 'app-experience',
@@ -78,7 +79,7 @@ export class ExperienceComponent implements OnInit {
     ],
   }
 
-  constructor() { }
+  constructor(public media: MediaObserver) {}
 
   ngOnInit() {
   }

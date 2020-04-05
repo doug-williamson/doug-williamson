@@ -17,6 +17,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { LatestNewsComponent } from './components/latest-news/latest-news.component';
+import { BlogComponent } from './views/blog/blog.component';
 
 @NgModule({
   imports: [
@@ -41,7 +42,7 @@ import { LatestNewsComponent } from './components/latest-news/latest-news.compon
 
     RhombusShellModule.forRoot({
       applicationInfo: {
-        name: '<doug-williamson>',
+        name: 'Doug Williamson',
         version: '1.0.0-beta.5',
         logoUrl: undefined,
         logoLetters: 'DW',
@@ -62,6 +63,7 @@ import { LatestNewsComponent } from './components/latest-news/latest-news.compon
     ComingSoonComponent,
     BiographyComponent,
     LatestNewsComponent,
+    BlogComponent,
   ],
   providers: [
     AngularFirestore,
