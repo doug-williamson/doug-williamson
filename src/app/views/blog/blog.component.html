@@ -1,0 +1,36 @@
+<div fxLayout="column" fxLayoutAlign="start stretch" fxFill>
+    <mat-card>
+        <mat-card-header class="blog__wrapper-header">
+            <img mat-card-avatar *ngIf="media.isActive('gt-xs')" [src]="'./assets/images/doug_williamson.jpg'" class="blog__wrapper-image">
+            <mat-card-title class="blog__wrapper-title">Doug's Blog</mat-card-title>
+            <mat-card-subtitle class="blog__wrapper-subtitle">Thoughts of a middle-aged crazy person</mat-card-subtitle>
+        </mat-card-header>
+    </mat-card>
+    <mat-accordion style="margin: 16px">
+        <mat-expansion-panel [expanded]="true">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Opening Thoughts
+                </mat-panel-title>
+                <mat-panel-description *ngIf="media.isActive('gt-xs')">
+                    04/04/2020
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <div *ngIf="media.isActive('xs')">04/04/2020</div>
+            <div class="blog__wrapper-blog-paragraph">
+                I would like to start by saying "Thank You" for checking out my portfolio website. I've put a lot of hard work into getting it up and running, and am excited for what's coming next.
+            </div>
+            <div class="blog__wrapper-blog-paragraph">
+                This website was created to meet three specific needs:
+            </div>
+            <ul>
+                <li>Stand up an app using in-house Rhombus-Shell library</li>
+                <li>Create exposure for Twitch Channel (Rhombus_TV)</li>
+                <li>Develop a code portfolio (front-end) for future business inquiries.</li>
+            </ul>
+            <div class="blog__wrapper-blog-paragraph">
+                Look forward to continued updates, added features and some really fun content!!!
+            </div>
+        </mat-expansion-panel>  
+    </mat-accordion>
+</div>

@@ -8,8 +8,7 @@ import { MediaObserver } from '@angular/flex-layout';
 })
 export class StreamingComponent implements OnInit {
 
-  constructor(public media: MediaObserver) {
-  }
+  constructor(public media: MediaObserver) {}
 
   ngOnInit() {
   }

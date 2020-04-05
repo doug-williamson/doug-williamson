@@ -1,7 +1,7 @@
 <div fxLayout="column" fxLayoutAlign="start stretch" fxFill>
   <ng-container *ngIf="media.isActive('lt-sm')">
 
-    <mat-accordion class="example-headers-align">
+    <mat-accordion class="example-headers-align" hideToggle>
       <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)">
         <mat-expansion-panel-header>
           <mat-panel-title>
