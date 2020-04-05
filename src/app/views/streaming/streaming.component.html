@@ -1,21 +1,25 @@
 <div fxLayout="column" fxLayoutAlign="start stretch" fxFill class="streaming__wrapper">
-  <!-- <mat-card>
+  <mat-card>
     <mat-card-header class="streaming__wrapper-header">
-        <img mat-card-avatar [src]="'./assets/images/rhombus_tv_avatar.png'" class="streaming__wrapper-image">
-        <mat-card-title class="streaming__wrapper-title">
-          Rhombus TV
-        </mat-card-title>
-        <mat-card-subtitle>
-          <button mat-icon-button color="primary" color="primary" (click)="goToLink('https://www.twitch.tv/Rhombus_TV')">
-            <mat-icon>open_in_new</mat-icon>
-          </button>
+      <img *ngIf="media.isActive('gt-xs')" mat-card-avatar [src]="'./assets/images/rhombus_tv_avatar.png'" class="streaming__wrapper-image">
+      <mat-card-title class="streaming__wrapper-title">
+        Rhombus TV
+      </mat-card-title>
+      <mat-card-subtitle>
+        <button mat-button color="primary" (click)="goToLink('https://www.twitch.tv/Rhombus_TV')">
+          <mat-icon>open_in_new</mat-icon>
           Twitch
-        </mat-card-subtitle>
+        </button>
+        <button mat-button color="accent" (click)="goToLink('https://discord.gg/EP5ER3T')">
+          <mat-icon>open_in_new</mat-icon>
+          Discord
+        </button>
+      </mat-card-subtitle>
     </mat-card-header>
-  </mat-card> -->
+  </mat-card>
   <div class="streaming__iframe" fxLayoutAlign="center stretch" fxFlex>
     <iframe fxFlex
-      src="https://mixer.com/embed/player/Rhombus_TV"
+      src="https://player.twitch.tv/?channel=rhombus_tv&muted=true"
       frameborder="0"
       scrolling="no"
       allowfullscreen="true">

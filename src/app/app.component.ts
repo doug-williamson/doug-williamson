@@ -15,6 +15,10 @@ export class AppComponent implements OnInit{
 
   navItems: RhombusShellNavItem[] = [
     {
+      label: "Doug's Blog",
+      route: 'blog',
+    },
+    {
       label: 'Biography',
       route: 'biography',
     },

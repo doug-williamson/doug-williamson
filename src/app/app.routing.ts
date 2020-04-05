@@ -4,6 +4,7 @@ import { ExperienceComponent } from './views/experience/experience.component';
 import { HomeComponent } from './views/home/home.component';
 import { StreamingComponent } from './views/streaming/streaming.component';
 import { BiographyComponent } from './views/biography/biography.component';
+import { BlogComponent } from './views/blog/blog.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,10 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+  },
+  {
+    path: 'blog',
+    component: BlogComponent,
   },
   {
     path: 'biography',

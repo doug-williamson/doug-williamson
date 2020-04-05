@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MediaObserver } from '@angular/flex-layout';
 
 @Component({
   selector: 'app-streaming',
@@ -7,8 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StreamingComponent implements OnInit {
 
-  constructor() {
-  }
+  constructor(public media: MediaObserver) {}
 
   ngOnInit() {
   }

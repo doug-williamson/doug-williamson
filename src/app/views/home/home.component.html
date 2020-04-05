@@ -1,14 +1,90 @@
 <div fxLayout="column" fxLayoutAlign="start stretch" fxFill>
-  <mat-card>
-    <mat-toolbar color="primary">
-      <span>Welcome</span>
-    </mat-toolbar>
-    <mat-card-content class="welcome__content">
-      <p>
-        This is my little corner of the internet. Here, you will find content relating to my professional development as a Software Engineer, as well as things relating to my personal life. Enjoy!
-      </p>
-    </mat-card-content>
-  </mat-card>
-  <app-coming-soon fxFlex></app-coming-soon>
-</div>
+  <ng-container *ngIf="media.isActive('lt-sm')">
+
+    <mat-accordion class="example-headers-align" hideToggle>
+      <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Welcome
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          This is my little corner of the internet.
+        </p>
+        <p>
+          Here, you will find content relating to my professional development as a Software Engineer, as well as things relating to my personal life.
+        </p>
+        <p>
+          Additionally, if you want to keep up with the coding conversation, check out my Discord channel.
+          <button mat-icon-button color="primary" (click)="goToLink('https://discord.gg/7ecptRj')">
+            <mat-icon>open_in_new</mat-icon>
+          </button>
+          <button mat-icon-button color="accent" (click)="goToLink('https://en.wikipedia.org/wiki/Discord_(software)')">
+            <mat-icon>help_outline</mat-icon>
+          </button>
+        </p>
+        <p>
+          Enjoy!
+        </p>
+      </mat-expansion-panel>
+    
+      <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Latest News
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <app-latest-news></app-latest-news>
+      </mat-expansion-panel>
+    
+      <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Coming Soon
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <app-coming-soon></app-coming-soon>
+      </mat-expansion-panel>
   
+    </mat-accordion>
+  </ng-container>
+  <ng-container *ngIf="media.isActive('gt-xs')">
+    <mat-card>
+      <mat-card-title>Welcome</mat-card-title>
+      <mat-card-content class="welcome__content">
+        <p>
+          This is my little corner of the internet.
+        </p>
+        <p>
+          Here, you will find content relating to my professional development as a Software Engineer, as well as things relating to my personal life.
+        </p>
+        <p>
+          Additionally, if you want to keep up with the coding conversation, check out my Discord channel.
+          <button mat-icon-button color="primary" (click)="goToLink('https://discord.gg/7ecptRj')">
+            <mat-icon>open_in_new</mat-icon>
+          </button>
+          <button mat-icon-button color="accent" (click)="goToLink('https://en.wikipedia.org/wiki/Discord_(software)')">
+            <mat-icon>help_outline</mat-icon>
+          </button>
+        </p>
+        <p>
+          Enjoy!
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <div fxLayout fxFlex>
+      <mat-card fxFlex>
+        <mat-card-title>Latest News</mat-card-title>
+        <mat-card-content>
+          <app-latest-news></app-latest-news>
+        </mat-card-content>
+      </mat-card>
+      <mat-card>
+        <mat-card-title>Coming Soon</mat-card-title>
+        <mat-card-content>
+          <app-coming-soon></app-coming-soon>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </ng-container>
+</div>

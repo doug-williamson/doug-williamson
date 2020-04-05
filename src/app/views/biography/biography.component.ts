@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MediaObserver } from '@angular/flex-layout';
 
 @Component({
   selector: 'app-biography',
@@ -9,7 +10,7 @@ export class BiographyComponent implements OnInit {
 
   step = 0;
 
-  constructor() { }
+  constructor(public media: MediaObserver) {}
 
   ngOnInit() {
   }
