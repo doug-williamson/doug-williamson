@@ -10,7 +10,7 @@ export class LatestNewsComponent implements OnInit {
   items = [
     {
       name: "Doug's Blog is here!",
-      date: new Date('03/31/2020'),
+      date: new Date('04/04/2020'),
     },
     {
       name: "New domain: 'dougwilliamson.space'",

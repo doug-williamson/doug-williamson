@@ -43,7 +43,7 @@ import { BlogComponent } from './views/blog/blog.component';
     RhombusShellModule.forRoot({
       applicationInfo: {
         name: 'Doug Williamson',
-        version: '1.0.0-beta.5',
+        version: '1.0.0-beta.7',
         logoUrl: undefined,
         logoLetters: 'DW',
         twitterUrl: 'https://twitter.com/Rhombus_TV_',

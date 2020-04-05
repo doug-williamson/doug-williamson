@@ -7,9 +7,10 @@ All notable changes to doug-williamson will be documented in this location. See 
 https://dougwilliamson.space
 
 <a name="1.0.0-beta.7"></a>
-# 1.0.0-beta.7 (2020-03-26)
+# 1.0.0-beta.7 (2020-04-04)
 
 ### Features
+* Added Doug's Blog
 * Added Latest News feature to Home view
 * Made Home view, Latest News and Coming Soon components responsive
 * Added #coding Discord link to Home view (Welcome)
