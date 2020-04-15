@@ -125,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "doug-williamson"
+    }
+  },
+  "defaultProject": "doug-williamson",
+  "cli": {
+    "analytics": "4bc76480-5c90-4c6e-b563-f0d65352a154"
+  }
 }

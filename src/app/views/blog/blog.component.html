@@ -1,12 +1,12 @@
 <div fxLayout="column" fxLayoutAlign="start stretch" fxFill>
-    <mat-card>
+    <mat-card class="blog__header__card">
         <mat-card-header class="blog__wrapper-header">
             <img mat-card-avatar *ngIf="media.isActive('gt-xs')" [src]="'./assets/images/doug_williamson.jpg'" class="blog__wrapper-image">
             <mat-card-title class="blog__wrapper-title">Doug's Blog</mat-card-title>
             <mat-card-subtitle class="blog__wrapper-subtitle">Thoughts of a middle-aged crazy person</mat-card-subtitle>
         </mat-card-header>
     </mat-card>
-    <mat-accordion style="margin: 16px">
+    <mat-accordion class="blog__accordion">
         <mat-expansion-panel [expanded]="true">
             <mat-expansion-panel-header>
                 <mat-panel-title>

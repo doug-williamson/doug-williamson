@@ -6,6 +6,16 @@ All notable changes to doug-williamson will be documented in this location. See 
 
 https://dougwilliamson.space
 
+<a name="1.0.0-beta.8"></a>
+# 1.0.0-beta.8 (2020-04-15)
+
+### Features
+* rhombus-shell: consumed beta.25, fixing sidenav collapsing, adding Dark Mode toggle and upgrading to Angular 9
+
+### Hotfixes
+* Updated multi-component view margins
+* Added dates to Experience view's non-mobile expansion panels
+
 <a name="1.0.0-beta.7"></a>
 # 1.0.0-beta.7 (2020-04-04)
 
