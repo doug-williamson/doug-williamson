@@ -1,4 +1,4 @@
-<div [ngClass]="{ 'rhombus-dark-theme' : _isDarkTheme | async }">
+<div [ngClass]="{ 'rhombus-dark-theme' : _darkMode$ | async }">
   <rhombus-shell-wrapper [title]="title" [navItems]="navItems"></rhombus-shell-wrapper>
 
   <rhombus-shell-themes>
