@@ -1,5 +1,5 @@
 <div fxLayout="column" fxLayoutAlign="start stretch" fxFill class="experience__wrapper">
-  <mat-card>
+  <mat-card style="margin-bottom: 16px;">
     <mat-card-header class="experience__wrapper-header">
         <img mat-card-avatar *ngIf="media.isActive('gt-xs')" [src]="'./assets/images/doug_williamson.jpg'" class="experience__wrapper-image">
         <mat-card-title class="experience__wrapper-title">Douglas Matthew Williamson</mat-card-title>
@@ -23,8 +23,11 @@
           <mat-panel-title>
             {{ job.name }}
           </mat-panel-title>
+          <mat-panel-description *ngIf="media.isActive('gt-xs')">
+            {{ job.dates }}
+          </mat-panel-description>
         </mat-expansion-panel-header>
-        <span>{{ job.dates }}</span>
+        <span *ngIf="media.isActive('xs')">{{ job.dates }}</span>
         <div class="experience__wrapper-job-card-content">
           {{ job.description }}
         </div>
