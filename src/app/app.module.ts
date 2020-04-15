@@ -4,7 +4,6 @@ import { AppComponent } from './app.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCardModule, MatListModule, MatIconModule, MatToolbarModule, MatExpansionModule, MatChipsModule, MatDividerModule, MatGridListModule, MatTabsModule } from '@angular/material';
 import { CommonModule } from '@angular/common';
 import { ExperienceComponent } from './views/experience/experience.component';
 import { HomeComponent } from './views/home/home.component';
@@ -18,6 +17,16 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { LatestNewsComponent } from './components/latest-news/latest-news.component';
 import { BlogComponent } from './views/blog/blog.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   imports: [
@@ -43,12 +52,13 @@ import { BlogComponent } from './views/blog/blog.component';
     RhombusShellModule.forRoot({
       applicationInfo: {
         name: 'Doug Williamson',
-        version: '1.0.0-beta.7',
+        version: '1.0.0-beta.8',
         logoUrl: undefined,
         logoLetters: 'DW',
         twitterUrl: 'https://twitter.com/Rhombus_TV_',
         changelogUrl: 'https://github.com/doug-williamson/doug-williamson/blob/master/CHANGELOG.md',
         donateUrl: 'https://www.paypal.me/dmwilliamson08',
+        contactUsLink: 'doug@dougwilliamson.space',
         firebaseConfig: undefined,
       },
     }),

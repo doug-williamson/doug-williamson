@@ -10,7 +10,7 @@ import { RhombusShellThemeService } from '@dougwilliamson/rhombus-shell';
 })
 export class AppComponent implements OnInit{
 
-  _isDarkTheme: Observable<boolean>;
+  _darkMode$: Observable<boolean>;
   title = 'Doug Williamson';
 
   navItems: RhombusShellNavItem[] = [
@@ -36,6 +36,6 @@ export class AppComponent implements OnInit{
     private themeService: RhombusShellThemeService) { }
 
   ngOnInit() {
-    this._isDarkTheme = this.themeService.darkThemeSubject.asObservable();
+    this._darkMode$ = this.themeService.darkMode$;
   }
 }

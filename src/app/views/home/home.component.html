@@ -49,7 +49,7 @@
     </mat-accordion>
   </ng-container>
   <ng-container *ngIf="media.isActive('gt-xs')">
-    <mat-card>
+    <mat-card class="home__welcome__card">
       <mat-card-title>Welcome</mat-card-title>
       <mat-card-content class="welcome__content">
         <p>
@@ -73,13 +73,13 @@
       </mat-card-content>
     </mat-card>
     <div fxLayout fxFlex>
-      <mat-card fxFlex>
+      <mat-card class="home__latest_news__card" fxFlex>
         <mat-card-title>Latest News</mat-card-title>
         <mat-card-content>
           <app-latest-news></app-latest-news>
         </mat-card-content>
       </mat-card>
-      <mat-card>
+      <mat-card class="home__coming_soon__card">
         <mat-card-title>Coming Soon</mat-card-title>
         <mat-card-content>
           <app-coming-soon></app-coming-soon>
