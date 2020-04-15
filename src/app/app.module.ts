@@ -52,12 +52,13 @@ import { MatTabsModule } from '@angular/material/tabs';
     RhombusShellModule.forRoot({
       applicationInfo: {
         name: 'Doug Williamson',
-        version: '1.0.0-beta.7',
+        version: '1.0.0-beta.8',
         logoUrl: undefined,
         logoLetters: 'DW',
         twitterUrl: 'https://twitter.com/Rhombus_TV_',
         changelogUrl: 'https://github.com/doug-williamson/doug-williamson/blob/master/CHANGELOG.md',
         donateUrl: 'https://www.paypal.me/dmwilliamson08',
+        contactUsLink: 'doug@dougwilliamson.space',
         firebaseConfig: undefined,
       },
     }),
