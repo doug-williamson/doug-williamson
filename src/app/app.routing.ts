@@ -15,22 +15,37 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    data: {
+      breadcrumb: 'Home',
+    }
   },
   {
     path: 'blog',
     component: BlogComponent,
+    data: {
+      breadcrumb: 'Blog',
+    },
   },
   {
     path: 'biography',
     component: BiographyComponent,
+    data: {
+      breadcrumb: 'Biography',
+    },
   },
   {
     path: 'experience',
     component: ExperienceComponent,
+    data: {
+      breadcrumb: 'Experience',
+    },
   },
   {
     path: 'streaming',
     component: StreamingComponent,
+    data: {
+      breadcrumb: 'Streaming',
+    },
   },
 ];
 
