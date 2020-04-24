@@ -6,11 +6,17 @@ All notable changes to doug-williamson will be documented in this location. See 
 
 https://dougwilliamson.space
 
+<a name="1.0.0-beta.9"></a>
+# 1.0.0-beta.9 (2020-04-15)
+
+### Features
+* rhombus-shell: upgraded to beta.28, updating sidenav and adding breadcrumb header
+
 <a name="1.0.0-beta.8"></a>
 # 1.0.0-beta.8 (2020-04-15)
 
 ### Features
-* rhombus-shell: upgraded to beta.26, fixing sidenav collapsing, adding Dark Mode toggle and upgrading to Angular 9
+* rhombus-shell: upgraded to beta.27, fixing sidenav collapsing, adding Dark Mode toggle and upgrading to Angular 9
 
 ### Hotfixes
 * Updated multi-component view margins
