@@ -6,6 +6,15 @@ All notable changes to doug-williamson will be documented in this location. See 
 
 https://dougwilliamson.space
 
+<a name="1.0.0-beta.10"></a>
+# 1.0.0-beta.10 (2020-05-01)
+
+### Features
+* Experience: moved overview and job array to Firebase, added orderBy pipe
+
+### Bug Fixes
+* rhombus-shell: upgraded to beta.30, adding fxFlex for router-outlet and fixing Home button text bug
+
 <a name="1.0.0-beta.9"></a>
 # 1.0.0-beta.9 (2020-04-15)
 

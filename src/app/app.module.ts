@@ -27,6 +27,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTabsModule } from '@angular/material/tabs';
+import { OrderPipe } from './views/experience/orderby.pipe';
 
 @NgModule({
   imports: [
@@ -74,6 +75,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     BiographyComponent,
     LatestNewsComponent,
     BlogComponent,
+
+    OrderPipe,
   ],
   providers: [
     AngularFirestore,
