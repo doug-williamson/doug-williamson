@@ -53,7 +53,7 @@ import { OrderPipe } from './views/experience/orderby.pipe';
     RhombusShellModule.forRoot({
       applicationInfo: {
         name: 'Doug Williamson',
-        version: '1.0.0-beta.9',
+        version: '1.0.0-beta.10',
         logoUrl: undefined,
         logoLetters: 'DW',
         twitterUrl: 'https://twitter.com/Rhombus_TV_',
