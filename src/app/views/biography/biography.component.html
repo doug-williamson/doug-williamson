@@ -7,31 +7,14 @@
         </mat-card-header>
     </mat-card>
     <mat-accordion class="example-headers-align">
-        <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)">
+        <mat-expansion-panel *ngFor="let section of biography">
             <mat-expansion-panel-header>
                 <mat-panel-title>
-                    About Me
+                    {{ section.payload.doc.data().description }}
                 </mat-panel-title>
             </mat-expansion-panel-header>
             <div class="experience__wrapper-job-card-content">
-                <p>
-                    I'm a software developer, in the Information Technology industry for 15 years, working on a wide variety of Software-as-a-Service (SaaS) products covering multiple client/server programming architectures.
-                </p>
-                <p>
-                    While my primary emphasis has been web programming, as a developer, I'm beginning transitions that emphasize Mentorship, Management and Product Evangelism.
-                </p>
-            </div>
-        </mat-expansion-panel>
-        <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)">
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    About This Website
-                </mat-panel-title>
-            </mat-expansion-panel-header>
-            <div class="experience__wrapper-job-card-content">
-              <p>
-                This website is built on Google's Angular platform, utilizing a home-grown library of reuseable components and services communicating with Firebase.
-              </p>
+                {{ section.payload.doc.data().text}}
             </div>
         </mat-expansion-panel>
     </mat-accordion>
