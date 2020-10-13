@@ -16,7 +16,6 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { LatestNewsComponent } from './components/latest-news/latest-news.component';
-import { BlogComponent } from './views/blog/blog.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
@@ -28,6 +27,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTabsModule } from '@angular/material/tabs';
 import { OrderPipe } from './views/experience/orderby.pipe';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   imports: [
@@ -45,6 +45,7 @@ import { OrderPipe } from './views/experience/orderby.pipe';
     MatIconModule,
     MatToolbarModule,
     MatGridListModule,
+    MatSidenavModule,
     MatTabsModule,
 
     AngularFireAuthModule,
@@ -74,7 +75,6 @@ import { OrderPipe } from './views/experience/orderby.pipe';
     ComingSoonComponent,
     BiographyComponent,
     LatestNewsComponent,
-    BlogComponent,
 
     OrderPipe,
   ],

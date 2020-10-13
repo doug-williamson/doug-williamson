@@ -4,7 +4,7 @@ import { ExperienceComponent } from './views/experience/experience.component';
 import { HomeComponent } from './views/home/home.component';
 import { StreamingComponent } from './views/streaming/streaming.component';
 import { BiographyComponent } from './views/biography/biography.component';
-import { BlogComponent } from './views/blog/blog.component';
+import { PostsComponent } from './views/posts/posts.component';
 
 const routes: Routes = [
   {
@@ -20,10 +20,10 @@ const routes: Routes = [
     }
   },
   {
-    path: 'blog',
-    component: BlogComponent,
+    path: 'posts',
+    loadChildren: () => import('./views/posts/posts.module').then(m => m.PostsModule),
     data: {
-      breadcrumb: 'Blog',
+      breadcrumb: 'Posts',
     },
   },
   {
