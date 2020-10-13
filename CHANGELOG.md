@@ -6,6 +6,14 @@ All notable changes to doug-williamson will be documented in this location. See 
 
 https://dougwilliamson.space
 
+<a name="1.0.0-beta.11"></a>
+# 1.0.0-beta.11 (2020-10-13)
+
+### Features
+* Posts: replaced Blog view of mat-accordion with Posts/Post mat-sidenav UI
+* Posts: moved blog data from component to Firebase collection('posts')
+* Biography: moved biography data from component to Firebase collection('biography')
+
 <a name="1.0.0-beta.10"></a>
 # 1.0.0-beta.10 (2020-05-01)
 
