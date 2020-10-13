@@ -7,7 +7,7 @@ All notable changes to doug-williamson will be documented in this location. See 
 https://dougwilliamson.space
 
 <a name="1.0.0-beta.11"></a>
-# 1.0.0-beta.10 (2020-10-13)
+# 1.0.0-beta.11 (2020-10-13)
 
 ### Features
 * Posts: replaced Blog view of mat-accordion with Posts/Post mat-sidenav UI
