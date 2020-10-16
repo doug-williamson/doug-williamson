@@ -1,0 +1,22 @@
+<div fxLayout="column" fxLayoutAlign="start stretch" fxFill>
+    <mat-drawer-container fxFlex>
+        <mat-drawer-content>
+            <div fxFlex>
+                <mat-list fxFlex>
+                    <div mat-subheader>Rags To Riches</div>
+                    <ng-container *ngIf="(dynasties$ | async) as dynasties">
+                        <ng-container *ngFor="let dynasty of dynasties">
+                            <mat-list-item *ngIf="dynasty" (click)="_selectedDynasty = dynasty; userDrawer.toggle();" >
+                                <div mat-line>{{ dynasty.name }}</div>
+                            </mat-list-item>
+                            <mat-divider *ngIf="!last"></mat-divider>
+                        </ng-container>
+                    </ng-container>
+                </mat-list>
+            </div>
+        </mat-drawer-content>
+        <mat-drawer #userDrawer [mode]="'push'" position="end">
+            <app-dynasty [dynasty]="_selectedDynasty" (close)="closeSidenav()"></app-dynasty>
+        </mat-drawer>
+    </mat-drawer-container>
+</div>

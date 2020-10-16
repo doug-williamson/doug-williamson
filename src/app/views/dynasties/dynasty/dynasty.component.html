@@ -1,0 +1,27 @@
+<div fxLayout="column" fxLayoutAlign="start stretch" fxFill *ngIf="dynasty">
+    <mat-toolbar>
+        <button mat-icon-button (click)="clickClose()">
+            <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+        {{ dynasty.name }}
+    </mat-toolbar>
+    <div class="dynasty">
+        <span>{{ dynasty.description }}</span>
+    </div>
+    <ng-container *ngIf="(dynastyMark$ | async) as dynastyMark">
+        <mat-accordion class="example-headers-align" multi="false" >
+            <ng-container *ngFor="let mark of dynastyMark; let first = first;">
+                <mat-expansion-panel (opened)="selectMark(mark)">
+                    <mat-expansion-panel-header>
+                        {{ mark.name }}
+                    </mat-expansion-panel-header>
+                  
+                    <ng-template matExpansionPanelContent *ngIf="(dynastyMarkYears$ | async) as dynastyYears">
+                        <app-years [years]="dynastyYears"></app-years>
+                    </ng-template>
+                </mat-expansion-panel>
+            </ng-container>
+        </mat-accordion>
+    </ng-container>
+
+</div>

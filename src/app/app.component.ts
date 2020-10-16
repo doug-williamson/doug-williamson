@@ -30,6 +30,10 @@ export class AppComponent implements OnInit{
       name: 'Rhombus TV',
       route: 'streaming',
     },
+    {
+      name: 'Dynasty',
+      route: 'dynasties',
+    },
   ];
 
   constructor(

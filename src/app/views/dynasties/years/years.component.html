@@ -1,0 +1,10 @@
+<div fxLayout="column" fxLayoutAlign="start stretch" fxFill>
+    <mat-list *ngIf="(dynastyYears$ | async) as years">
+        <ng-container *ngFor="let year of years">
+            <mat-list-item *ngIf="year">
+                <!-- <app-weeks [weeks]="year.weeks"></app-weeks> -->
+            </mat-list-item>
+        </ng-container>
+    </mat-list>
+    Doug Williamson
+</div>
