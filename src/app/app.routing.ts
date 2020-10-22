@@ -27,6 +27,13 @@ const routes: Routes = [
     },
   },
   {
+    path: 'dynasty',
+    loadChildren: () => import('./views/dynasties/dynasties.module').then(m => m.DynastiesModule),
+    data: {
+      breadcrumb: 'Dynasty',
+    },
+  },
+  {
     path: 'biography',
     component: BiographyComponent,
     data: {
