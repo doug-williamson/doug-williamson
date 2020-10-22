@@ -7,13 +7,10 @@ All notable changes to doug-williamson will be documented in this location. See 
 https://dougwilliamson.space
 
 <a name="1.0.0-beta.12"></a>
-# 1.0.0-beta.12 (2020-10-13)
+# 1.0.0-beta.12 (2020-10-22)
 
 ### Features
-* 
-
-### Bug Fixes
-* 
+* Dynasties: created initial component(s) for Firebase-driven gaming data
 
 <a name="1.0.0-beta.11"></a>
 # 1.0.0-beta.11 (2020-10-13)
