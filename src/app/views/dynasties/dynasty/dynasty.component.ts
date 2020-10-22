@@ -18,12 +18,11 @@ export class DynastyComponent implements OnInit {
 
   _selectedMark: IDynastyMark;
   dynastyMark$: Observable<IDynastyMark[]>;
-  dynastyMarkYears$: Observable<IDynastyYear[]>;
 
   constructor(private dynastiesService: DynastiesService) {}
 
   ngOnInit() {
-    this.dynastyMark$ = this.dynastiesService.getDynastyMark$('3WrQ17i2oOpnleoh7nWF');
+    this.dynastyMark$ = this.dynastiesService.getDynastyMark$();
   }
 
   clickClose() {
@@ -33,6 +32,5 @@ export class DynastyComponent implements OnInit {
   selectMark(mark: IDynastyMark) {
     this._selectedMark = mark;
     console.log(mark.id);
-    this.dynastyMarkYears$ = this.dynastiesService.getDynastyMarkYears$('3WrQ17i2oOpnleoh7nWF', '6knwYblmlhEwUCHbOzfd');
   }
 }

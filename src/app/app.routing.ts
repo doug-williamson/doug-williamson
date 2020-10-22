@@ -27,10 +27,10 @@ const routes: Routes = [
     },
   },
   {
-    path: 'dynasties',
+    path: 'dynasty',
     loadChildren: () => import('./views/dynasties/dynasties.module').then(m => m.DynastiesModule),
     data: {
-      breadcrumb: 'Dynasties',
+      breadcrumb: 'Dynasty',
     },
   },
   {

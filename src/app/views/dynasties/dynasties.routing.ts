@@ -7,7 +7,7 @@ const routes: Routes = [
     path: '',
     component: DynastiesComponent,
     data: {
-        breadcrumb: 'Dynasties',
+        breadcrumb: 'Dynasty',
     },
   },
 ];

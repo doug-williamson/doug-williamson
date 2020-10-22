@@ -13,7 +13,7 @@ export class DynastiesService {
   dynastyCollection: AngularFirestoreCollection<IDynasty>;
   dynastyMarkCollection: AngularFirestoreCollection<IDynastyMark>;
   dynastyMarkYearsCollection: AngularFirestoreCollection<IDynastyYear>;
-  dynastyMarkYearWeeksColleciton: AngularFirestoreCollection<IDynastyWeek>;
+  dynastyMarkYearWeeksCollection: AngularFirestoreCollection<IDynastyWeek>;
 
   constructor(private firestore: AngularFirestore) {}
 
@@ -22,8 +22,6 @@ export class DynastiesService {
 
     return this.dynastyCollection.snapshotChanges().pipe(
       map(actions => actions.map(a => {
-        console.log(a.payload.doc.id);
-        console.log(a.payload.doc.data());
         const data = a.payload.doc.data() as IDynasty;
         const id = a.payload.doc.id;
 
@@ -31,13 +29,11 @@ export class DynastiesService {
       })));
   }
 
-  getDynastyMark$(dynastyId: number): Observable<IDynastyMark[]>{
-    this.dynastyMarkCollection = this.firestore.collection<IDynasty>('dynasties').doc(dynastyId.toString()).collection<IDynastyMark>('mark');
+  getDynastyMark$(): Observable<IDynastyMark[]>{
+    this.dynastyMarkCollection = this.firestore.collection<IDynasty>('dynasties').doc('3WrQ17i2oOpnleoh7nWF').collection<IDynastyMark>('mark');
     
     return this.dynastyMarkCollection.snapshotChanges().pipe(
       map(actions => actions.map(a => {
-        console.log(a.payload.doc.id);
-        console.log(a.payload.doc.data());
         const data = a.payload.doc.data() as IDynastyMark;
         const id = a.payload.doc.id;
 
@@ -45,13 +41,11 @@ export class DynastiesService {
       }))); 
   }  
 
-  getDynastyMarkYears$(dynastyId: string, markId: string): Observable<IDynastyYear[]> {
-    this.dynastyMarkYearsCollection = this.firestore.collection<IDynasty>('dynasties').doc(dynastyId).collection<IDynastyMark>('mark').doc(markId).collection<IDynastyYear>('years');
+  getDynastyMarkYears$(): Observable<IDynastyYear[]> {
+    this.dynastyMarkYearsCollection = this.firestore.collection<IDynasty>('dynasties').doc('3WrQ17i2oOpnleoh7nWF').collection<IDynastyMark>('mark').doc('6knwYblmlhEwUCHbOzfd').collection<IDynastyYear>('years');
     
     return this.dynastyMarkYearsCollection.snapshotChanges().pipe(
       map(actions => actions.map(a => {
-        console.log(a.payload.doc.id);
-        console.log(a.payload.doc.data());
         const data = a.payload.doc.data() as IDynastyYear;
         const id = a.payload.doc.id;
 
@@ -59,13 +53,11 @@ export class DynastiesService {
       }))); 
   }
 
-  getDynastyWeeks$(dynastyId: string, markId: string, yearId: string): Observable<IDynastyWeek[]> {
-    this.dynastyMarkYearWeeksColleciton = this.firestore.collection<IDynasty>('dynasties').doc(dynastyId).collection<IDynastyMark>('mark').doc(markId).collection<IDynastyYear>('years').doc(yearId).collection<IDynastyWeek>('weeks');
+  getDynastyWeeks$(): Observable<IDynastyWeek[]> {
+    this.dynastyMarkYearWeeksCollection = this.firestore.collection<IDynasty>('dynasties').doc('3WrQ17i2oOpnleoh7nWF').collection<IDynastyMark>('mark').doc('6knwYblmlhEwUCHbOzfd').collection<IDynastyYear>('years').doc('odCZwgaiIYLfrdXaAfFm').collection<IDynastyWeek>('weeks');
   
-    return this.dynastyMarkYearWeeksColleciton.snapshotChanges().pipe(
+    return this.dynastyMarkYearWeeksCollection.snapshotChanges().pipe(
       map(actions => actions.map(a => {
-        console.log(a.payload.doc.id);
-        console.log(a.payload.doc.data());
         const data = a.payload.doc.data() as IDynastyWeek;
         const id = a.payload.doc.id;
 

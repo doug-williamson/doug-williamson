@@ -12,18 +12,15 @@ import { IDynasty, IDynastyYear, IDynastyWeek, IDynastyMark} from './dynasty/dyn
 })
 export class DynastiesComponent implements OnInit {
 
-  @ViewChild('userDrawer') private sidenav: MatSidenav;
-
-  dynasties$: Observable<IDynasty[]>;
+  dynasties: IDynasty[];
   _selectedDynasty: IDynasty = undefined;
 
   constructor(public media: MediaObserver, private dynastiesService: DynastiesService) {}
 
   ngOnInit() {
-    this.dynasties$ = this.dynastiesService.getDynasties$();
-  }
-
-  closeSidenav() {
-    this.sidenav.close();
+    this.dynastiesService.getDynasties$().subscribe(res => {
+      this.dynasties = res;
+      this._selectedDynasty = this.dynasties[0];
+    });
   }
 }

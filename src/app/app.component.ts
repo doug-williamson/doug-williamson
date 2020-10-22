@@ -32,7 +32,7 @@ export class AppComponent implements OnInit{
     },
     {
       name: 'Dynasty',
-      route: 'dynasties',
+      route: 'dynasty',
     },
   ];
 
