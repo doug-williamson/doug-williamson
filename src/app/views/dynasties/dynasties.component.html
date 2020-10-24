@@ -1,6 +1,6 @@
 <div fxLayout fxLayoutAlign="start stretch" fxFill>
 
-    <mat-list fxFlex>
+    <!-- <mat-list fxFlex>
         <ng-container *ngIf="(dynasties$ | async) as dynasties">
             <ng-container *ngFor="let dynasty of dynasties">
                 <mat-list-item *ngIf="dynasty" (click)="_selectedDynasty = dynasty;" >
@@ -9,7 +9,7 @@
                 <mat-divider *ngIf="!last"></mat-divider>
             </ng-container>
         </ng-container>
-    </mat-list>
-    <app-dynasty [dynasty]="_selectedDynasty"></app-dynasty>
+    </mat-list> -->
+    <app-dynasty [dynasty]="_selectedDynasty" fxFlex></app-dynasty>
 
 </div>

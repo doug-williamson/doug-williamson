@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { YearsComponent } from './years/years.component';
+import { TeamComponent } from './years/team/team.component';
 
 @NgModule({
   imports: [
@@ -31,6 +32,6 @@ import { YearsComponent } from './years/years.component';
 
     DynastiesRoutingModule,
   ],
-  declarations: [DynastyComponent, DynastiesComponent, YearsComponent],
+  declarations: [DynastyComponent, DynastiesComponent, YearsComponent, TeamComponent],
 })
 export class DynastiesModule { }
