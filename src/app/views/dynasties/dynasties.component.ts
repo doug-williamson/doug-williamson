@@ -20,6 +20,8 @@ export class DynastiesComponent implements OnInit {
   ngOnInit() {
     this.dynastiesService.getDynasties$().subscribe(res => {
       this.dynasties = res;
+
+      // change to collection for multi-dynasty collection
       this._selectedDynasty = this.dynasties[0];
     });
   }

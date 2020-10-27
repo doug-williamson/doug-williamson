@@ -54,7 +54,7 @@ export class DynastiesService {
   }
 
   getDynastyWeeks$(): Observable<IDynastyWeek[]> {
-    this.dynastyMarkYearWeeksCollection = this.firestore.collection<IDynasty>('dynasties').doc('3WrQ17i2oOpnleoh7nWF').collection<IDynastyMark>('mark').doc('6knwYblmlhEwUCHbOzfd').collection<IDynastyYear>('years').doc('odCZwgaiIYLfrdXaAfFm').collection<IDynastyWeek>('weeks');
+    this.dynastyMarkYearWeeksCollection = this.firestore.collection<IDynasty>('dynasties').doc('3WrQ17i2oOpnleoh7nWF').collection<IDynastyMark>('mark').doc('6knwYblmlhEwUCHbOzfd').collection<IDynastyYear>('years').doc('odCZwgaiIYLfrdXaAfFm').collection<IDynastyWeek>('weeks', ref => ref.orderBy('week'));
   
     return this.dynastyMarkYearWeeksCollection.snapshotChanges().pipe(
       map(actions => actions.map(a => {

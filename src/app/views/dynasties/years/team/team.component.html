@@ -1,16 +1,17 @@
 <div fxLayout>
     <ng-container [ngSwitch]="year.positionId">
         <ng-container *ngSwitchCase="1">
-            <span class="team__position-id">OC</span>
+            <span class="team__position-id">Offensive Coordinator</span>
         </ng-container>
         <ng-container *ngSwitchCase="2">
-            <span class="team__position-id">DC</span>
+            <span class="team__position-id">Defensive Coordinator</span>
         </ng-container>
         <ng-container *ngSwitchCase="3">
-            <span class="team__position-id">HC</span>
+            <span class="team__position-id">Head Coach</span>
         </ng-container>
     </ng-container>
+    <mat-divider [vertical]="true"></mat-divider>
     <div>{{ year.team }}</div>
-    <div>({{ year.mascot }})</div>
+    <div>{{ year.mascot }}</div>
 </div>
 

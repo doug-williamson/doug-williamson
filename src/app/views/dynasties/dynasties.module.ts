@@ -14,6 +14,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { YearsComponent } from './years/years.component';
 import { TeamComponent } from './years/team/team.component';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { TeamComponent } from './years/team/team.component';
 
     MatButtonModule,
     MatIconModule,
+    MatDividerModule,
     MatCardModule,
     MatListModule,
     MatIconModule,
