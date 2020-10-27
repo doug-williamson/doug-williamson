@@ -19,7 +19,7 @@ import { IDynastyWeek, IDynastyYear } from '../dynasty/dynasty';
 })
 export class YearsComponent implements OnInit {
 
-  displayedColumns: string[] = ['week', 'opponent', 'ourScore', 'theirScore'];
+  displayedColumns: string[] = ['week', 'home', 'opponent', 'results'];
 
   @Input()
   years: IDynastyYear[] = undefined;

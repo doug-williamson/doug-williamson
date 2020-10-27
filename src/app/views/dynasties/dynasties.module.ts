@@ -13,6 +13,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { YearsComponent } from './years/years.component';
+import { TeamComponent } from './years/team/team.component';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   imports: [
@@ -21,6 +23,7 @@ import { YearsComponent } from './years/years.component';
 
     MatButtonModule,
     MatIconModule,
+    MatDividerModule,
     MatCardModule,
     MatListModule,
     MatIconModule,
@@ -31,6 +34,6 @@ import { YearsComponent } from './years/years.component';
 
     DynastiesRoutingModule,
   ],
-  declarations: [DynastyComponent, DynastiesComponent, YearsComponent],
+  declarations: [DynastyComponent, DynastiesComponent, YearsComponent, TeamComponent],
 })
 export class DynastiesModule { }

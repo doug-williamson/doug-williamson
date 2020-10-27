@@ -54,10 +54,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     RhombusShellModule.forRoot({
       applicationInfo: {
         name: 'Doug Williamson',
-        version: '1.0.0-beta.12',
+        version: '1.0.0-beta.13',
         logoUrl: undefined,
         logoLetters: 'DW',
-        twitterUrl: 'https://twitter.com/Rhombus_TV_',
+        twitterUrl: 'https://twitter.com/Rhombus_TV',
         changelogUrl: 'https://github.com/doug-williamson/doug-williamson/blob/master/CHANGELOG.md',
         donateUrl: 'https://www.paypal.me/dmwilliamson08',
         contactUsLink: 'doug@dougwilliamson.space',

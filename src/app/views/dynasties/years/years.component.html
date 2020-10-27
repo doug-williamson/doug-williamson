@@ -1,39 +1,62 @@
 <div fxLayout="column" fxLayoutAlign="start stretch" fxFill>
     <ng-container *ngIf="(dynastyYears$ | async) as years">
-        <ng-container *ngFor="let year of years">
-            <div mat-subheader>Year {{ year.id }}</div>
-            <div mat-subheader>Position Id: {{ year.positionId }}</div>
-            <div mat-subheader>Team: {{ year.team }}</div>
+        <mat-accordion class="example-headers-align" multi>
+            <mat-expansion-panel *ngFor="let year of years" expanded>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Year {{ year.id }}
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        <app-team [year]="year"></app-team>
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+          
+                <table mat-table [dataSource]="dynastyWeeks" fxFlex>
             
-            <table mat-table [dataSource]="dynastyWeeks" fxFlex>
+                    <!-- Rank Column -->
+                    <ng-container matColumnDef="week">
+                        <th mat-header-cell *matHeaderCellDef> Week </th>
+                        <td mat-cell *matCellDef="let element"> {{ element.week }} </td>
+                    </ng-container>
+
+                    <!-- isHome Column-->
+                    <ng-container matColumnDef="home">
+                        <th mat-header-cell *matHeaderCellDef> Home </th>
+                        <td mat-cell *matCellDef="let element">
+                            <ng-container *ngIf="element.home === true && element.opponent">
+                                <mat-icon>home</mat-icon>
+                            </ng-container>
+                        </td>
+                    </ng-container>
             
-                <!-- Rank Column -->
-                <ng-container matColumnDef="week">
-                    <th mat-header-cell *matHeaderCellDef> Week </th>
-                    <td mat-cell *matCellDef="let element"> {{ element.week }} </td>
-                </ng-container>
+                    <!-- Team Column -->
+                    <ng-container matColumnDef="opponent">
+                        <th mat-header-cell *matHeaderCellDef> Opponent </th>
+                        <td mat-cell *matCellDef="let element">
+                            <ng-container *ngIf="element.opponent; else byeWeek">
+                                {{ element.opponent }}
+                            </ng-container>
+                            <ng-template #byeWeek>
+                                BYE
+                            </ng-template>
+                        </td>
+                    </ng-container>
         
-                <!-- Team Column -->
-                <ng-container matColumnDef="opponent">
-                    <th mat-header-cell *matHeaderCellDef> Opponent </th>
-                    <td mat-cell *matCellDef="let element"> {{ element.opponent }} </td>
-                </ng-container>
-    
-                <!-- Record Column -->
-                <ng-container matColumnDef="ourScore">
-                    <th mat-header-cell *matHeaderCellDef> Our Score </th>
-                    <td mat-cell *matCellDef="let element"> {{ element.ourScore }} </td>
-                </ng-container>
-        
-                <!-- Name Column -->
-                <ng-container matColumnDef="theirScore">
-                    <th mat-header-cell *matHeaderCellDef> Their Score </th>
-                    <td mat-cell *matCellDef="let element"> {{ element.theirScore }} </td>
-                </ng-container>
-              
-                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-            </table>
-        </ng-container>
+                    <!-- Record Column -->
+                    <ng-container matColumnDef="results">
+                        <th mat-header-cell *matHeaderCellDef> Results </th>
+                        <td mat-cell *matCellDef="let element" > 
+                            <ng-container *ngIf="element.ourScore > 0 || element.theirScore > 0">
+                                {{ element.ourScore }} - {{ element.theirScore }}
+                            </ng-container>
+                        </td>
+                    </ng-container>
+                  
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+          
+            </mat-expansion-panel>
+          </mat-accordion>
     </ng-container>
 </div>
