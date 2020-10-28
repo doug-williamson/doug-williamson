@@ -6,9 +6,77 @@
 // Typography
 @include rhombus-typography();
 
+/* For use in src/lib/core/theming/_palette.scss */
+$_doug-williamson-primary: (
+    50 : #e8f4fd,
+    100 : #c5e3f9,
+    200 : #9fd0f6,
+    300 : #79bdf2,
+    400 : #5caeef,
+    500 : #3fa0ec,
+    600 : #3998ea,
+    700 : #318ee7,
+    800 : #2984e4,
+    900 : #1b73df,
+    A100 : #ffffff,
+    A200 : #e0edff,
+    A400 : #adcfff,
+    A700 : #93c0ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+/* For use in src/lib/core/theming/_palette.scss */
+$_doug-williamson-accent: (
+    50 : #f3e2fb,
+    100 : #e0b6f5,
+    200 : #cc86ef,
+    300 : #b856e9,
+    400 : #a831e4,
+    500 : #990ddf,
+    600 : #910bdb,
+    700 : #8609d7,
+    800 : #7c07d2,
+    900 : #6b03ca,
+    A100 : #f8f2ff,
+    A200 : #ddbfff,
+    A400 : #c28cff,
+    A700 : #b473ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
 // Default colors
-$my-app-primary: mat-palette($mat-blue, 700, 100, 800);
-$my-app-accent:  mat-palette($mat-green, 700, 100, 800);
+$my-app-primary: mat-palette($_doug-williamson-primary, 700, 100, 800);
+$my-app-accent:  mat-palette($_doug-williamson-accent, 700, 100, 800);
 $my-app-warn: mat-palette($mat-red, 700, 100, 800);
 
 $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);

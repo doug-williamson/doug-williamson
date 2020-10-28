@@ -6,6 +6,15 @@ All notable changes to doug-williamson will be documented in this location. See 
 
 https://dougwilliamson.space
 
+<a name="1.0.0-beta.14"></a>
+# 1.0.0-beta.14 (2020-10-27)
+
+### Features
+* Theming: Added gradients for new primary and accent colors
+
+### Bug Fixes
+
+
 <a name="1.0.0-beta.13"></a>
 # 1.0.0-beta.13 (2020-10-27)
 
