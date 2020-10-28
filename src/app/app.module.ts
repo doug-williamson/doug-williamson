@@ -9,7 +9,6 @@ import { ExperienceComponent } from './views/experience/experience.component';
 import { HomeComponent } from './views/home/home.component';
 import { StreamingComponent } from './views/streaming/streaming.component';
 import { AppRoutingModule } from './app.routing';
-import { ComingSoonComponent } from './components/coming-soon/coming-soon.component';
 import { BiographyComponent } from './views/biography/biography.component';
 import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -28,6 +27,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTabsModule } from '@angular/material/tabs';
 import { OrderPipe } from './views/experience/orderby.pipe';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { BacklogComponent } from './components/backlog/backlog.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   imports: [
@@ -47,6 +48,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatGridListModule,
     MatSidenavModule,
     MatTabsModule,
+    MatTableModule,
 
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
@@ -72,11 +74,13 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     ExperienceComponent,
     HomeComponent,
     StreamingComponent,
-    ComingSoonComponent,
+    BacklogComponent,
     BiographyComponent,
     LatestNewsComponent,
 
     OrderPipe,
+
+    BacklogComponent,
   ],
   providers: [
     AngularFirestore,
