@@ -7,13 +7,14 @@ All notable changes to doug-williamson will be documented in this location. See 
 https://dougwilliamson.space
 
 <a name="1.0.0-beta.14"></a>
-# 1.0.0-beta.14 (2020-10-27)
+# 1.0.0-beta.14 (2020-10-28)
 
 ### Features
 * Theming: Added gradients for new primary and accent colors
 
 ### Bug Fixes
-
+* Biography: added OrderBy for About Me/Website
+* Experience: added OrderBy for Jobs
 
 <a name="1.0.0-beta.13"></a>
 # 1.0.0-beta.13 (2020-10-27)

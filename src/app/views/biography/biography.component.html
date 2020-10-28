@@ -7,16 +7,18 @@
         </mat-card-header>
     </mat-card>
     <mat-accordion class="example-headers-align">
-        <mat-expansion-panel *ngFor="let section of biography">
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    {{ section.payload.doc.data().description }}
-                </mat-panel-title>
-            </mat-expansion-panel-header>
-            <div class="experience__wrapper-job-card-content">
-                {{ section.payload.doc.data().text}}
-            </div>
-        </mat-expansion-panel>
+        <ng-container *ngFor="let section of biography">
+            <mat-expansion-panel [expanded]="section.id === 1"> 
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        {{ section.description }}
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="experience__wrapper-job-card-content">
+                    {{ section.text}}
+                </div>
+            </mat-expansion-panel>
+        </ng-container>
     </mat-accordion>
 </div>
     
