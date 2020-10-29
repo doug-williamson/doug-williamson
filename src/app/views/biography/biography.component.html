@@ -1,24 +1,26 @@
 <div class="biography__wrapper" fxLayout="column" fxLayoutAlign="start stretch" fxFill>
-    <mat-card style="margin-bottom: 16px;">
+    <mat-card style="margin-bottom: 16px;" fxFlex>
         <mat-card-header class="biography__wrapper-header">
             <img mat-card-avatar *ngIf="media.isActive('gt-xs')" [src]="'./assets/images/doug_williamson.jpg'" class="biography__wrapper-image">
             <mat-card-title class="biography__wrapper-title">Douglas Matthew Williamson</mat-card-title>
             <mat-card-subtitle class="biography__wrapper-subtitle">Charleston, SC</mat-card-subtitle>
         </mat-card-header>
+        <mat-card-content>
+            <div fxLayout="column" fxLayoutAlign="start stretch" fxFlexFill>
+                <ng-container *ngFor="let section of biography">
+                    <mat-card fxFlex>
+                        <mat-card-header>
+                            <mat-card-title>{{ section.description }}</mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content fxLayout="column">
+                            <div class="experience__wrapper-job-card-content" fxFlex>
+                                {{ section.text}}
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+                </ng-container>
+            </div>
+        </mat-card-content>
     </mat-card>
-    <mat-accordion class="example-headers-align">
-        <ng-container *ngFor="let section of biography">
-            <mat-expansion-panel [expanded]="section.id === 1"> 
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        {{ section.description }}
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <div class="experience__wrapper-job-card-content">
-                    {{ section.text}}
-                </div>
-            </mat-expansion-panel>
-        </ng-container>
-    </mat-accordion>
 </div>
     
