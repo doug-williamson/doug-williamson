@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MediaObserver } from '@angular/flex-layout';
+import { IBiography } from './biography';
 import { BiographyService } from './biography.service';
 
 @Component({
@@ -9,15 +10,14 @@ import { BiographyService } from './biography.service';
 })
 export class BiographyComponent implements OnInit {
 
+  biography: IBiography[];
+
   constructor(public media: MediaObserver, private biographyService: BiographyService) {}
 
   ngOnInit() {
-    this.getBiography();
+    this.biographyService.getBiography$().subscribe(res => {
+      this.biography = res;
+    });
   }
-
-  biography;   getBiography = () =>
-      this.biographyService
-      .getBiography()
-      .subscribe(res =>(this.biography = res));
 
 }
