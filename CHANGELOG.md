@@ -11,6 +11,7 @@ https://dougwilliamson.space
 
 ### Features
 * Theming: Added gradients for new primary and accent colors
+* Backlog: Added view for project statuses: To Do, In Progress, and Done. Replaces Coming Soon view.
 
 ### Bug Fixes
 * Biography: added OrderBy for About Me/Website
