@@ -31,6 +31,5 @@ export class DynastyComponent implements OnInit {
 
   selectMark(mark: IDynastyMark) {
     this._selectedMark = mark;
-    console.log(mark.id);
   }
 }

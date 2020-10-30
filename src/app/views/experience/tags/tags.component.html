@@ -1,0 +1,5 @@
+<mat-chip-list aria-label="Fish selection">
+    <ng-container *ngFor="let attribute of jobTags">	
+        <mat-chip [color]="getColorType(attribute.type)" selected (click)="goToLink(attribute.url)">{{ attribute.name }}</mat-chip>
+    </ng-container>	
+</mat-chip-list>
