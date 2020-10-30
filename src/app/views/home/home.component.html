@@ -9,22 +9,7 @@
           </mat-panel-title>
         </mat-expansion-panel-header>
         <p>
-          This is my little corner of the internet.
-        </p>
-        <p>
           Here, you will find content relating to my professional development as a Software Engineer, as well as things relating to my personal life.
-        </p>
-        <p>
-          Additionally, if you want to keep up with the coding conversation, check out my Discord channel.
-          <button mat-icon-button color="primary" (click)="goToLink('https://discord.gg/7ecptRj')">
-            <mat-icon>open_in_new</mat-icon>
-          </button>
-          <button mat-icon-button color="accent" (click)="goToLink('https://en.wikipedia.org/wiki/Discord_(software)')">
-            <mat-icon>help_outline</mat-icon>
-          </button>
-        </p>
-        <p>
-          Enjoy!
         </p>
       </mat-expansion-panel>
     
@@ -49,37 +34,22 @@
     </mat-accordion>
   </ng-container>
   <ng-container *ngIf="media.isActive('gt-xs')">
-    <mat-card class="home__welcome__card">
-      <mat-card-title>Welcome</mat-card-title>
-      <mat-card-content class="welcome__content">
-        <p>
-          This is my little corner of the internet.
-        </p>
-        <p>
-          Here, you will find content relating to my professional development as a Software Engineer, as well as things relating to my personal life.
-        </p>
-        <p>
-          Additionally, if you want to keep up with the coding conversation, check out my Discord channel.
-          <button mat-icon-button color="primary" (click)="goToLink('https://discord.gg/7ecptRj')">
-            <mat-icon>open_in_new</mat-icon>
-          </button>
-          <button mat-icon-button color="accent" (click)="goToLink('https://en.wikipedia.org/wiki/Discord_(software)')">
-            <mat-icon>help_outline</mat-icon>
-          </button>
-        </p>
-        <p>
-          Enjoy!
-        </p>
-      </mat-card-content>
-    </mat-card>
-    <div fxLayout fxFlex>
-      <mat-card class="home__latest_news__card" fxFlex>
-        <mat-card-title>Latest News</mat-card-title>
-        <mat-card-content>
-          <app-latest-news></app-latest-news>
+    <div fxLayout="column" fxLayoutAlign="start stretch" fxFlex>
+      <mat-card class="home__welcome__card">
+        <mat-card-header>
+          <mat-card-title>Welcome</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="welcome__content">
+          <p>
+            Here, you will find content relating to my professional development as a Software Engineer, as well as things relating to my personal life.
+          </p>
         </mat-card-content>
       </mat-card>
-      <app-backlog fxFlex></app-backlog>
+      <div fxLayout="row" fxLayoutAlign="start stretch" fxFlex>
+        <app-latest-news fxFlex></app-latest-news>
+        <app-backlog fxFlex="30"></app-backlog>
+      </div>
     </div>
+
   </ng-container>
 </div>
