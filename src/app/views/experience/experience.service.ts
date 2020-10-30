@@ -3,11 +3,18 @@ import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument 
 import { Observable } from 'rxjs/internal/Observable';
 import { map } from 'rxjs/operators';
 
+export interface IJobTag {
+  name: string;
+  type: number;
+  url: string;
+}
+
 export interface IJob {
-  id: number;
+  jobId: number;
   name: string;
   description: string;
   dates: string;
+  // tags: IJobTag[];
 }
 
 export interface IExperience {
@@ -22,12 +29,13 @@ export interface IExperience {
 export class ExperienceService {
 
   jobsCollection: AngularFirestoreCollection<IJob>;
+  jobTagsCollection: AngularFirestoreCollection<IJobTag>;
   experienceDocument: AngularFirestoreDocument<IExperience>;
 
   constructor(private firestore: AngularFirestore) { }
 
   getJobs$(): Observable<IJob[]> {
-    this.jobsCollection = this.firestore.collection<IJob>('jobs', ref => ref.orderBy('id', 'desc'));
+    this.jobsCollection = this.firestore.collection<IJob>('jobs', ref => ref.orderBy('jobId', 'desc'));
   
     return this.jobsCollection.snapshotChanges().pipe(
       map(actions => actions.map(a => {
@@ -42,5 +50,17 @@ export class ExperienceService {
     this.experienceDocument = this.firestore.collection('experience').doc('LeCgw68Il49nG55EMbX7');
 
     return this.experienceDocument.valueChanges();
+  }
+
+  getJobTags$(value: string): Observable<IJobTag[]> {
+    this.jobTagsCollection = this.firestore.collection('jobs').doc(value).collection('tags', ref => ref.orderBy('type'));
+
+    return this.jobTagsCollection.snapshotChanges().pipe(
+      map(actions => actions.map(a => {
+        const data = a.payload.doc.data() as IJobTag;
+        const id = a.payload.doc.id;
+
+        return { id, ...data };
+      }))); 
   }
 }
