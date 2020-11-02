@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestoreCollection, AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { IPost } from './post/post';
@@ -10,6 +10,8 @@ import { IPost } from './post/post';
 export class PostsService {
 
   postCollection: AngularFirestoreCollection<IPost>;
+
+  postDocument: AngularFirestoreDocument<IPost>;
   // postParagraphCollection: AngularFirestoreCollection<postParagraph>;
 
   constructor(private firestore: AngularFirestore) {
@@ -26,5 +28,11 @@ export class PostsService {
 
         return { id, ...data };
       })));
+  }
+
+  getPost$(id: string): Observable<IPost> {
+    this.postDocument = this.firestore.collection('blog').doc(id);
+
+    return this.postDocument.valueChanges();
   }
 }
