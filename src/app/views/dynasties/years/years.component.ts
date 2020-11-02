@@ -33,7 +33,6 @@ export class YearsComponent implements OnInit {
   ngOnInit(): void {
     this.dynastyYears$ = this.dynastiesService.getDynastyMarkYears$();
     this.dynastiesService.getDynastyWeeks$().subscribe(data => {
-      console.log(data);
       this.dynastyWeeks = data as IDynastyWeek[];
     })
   }

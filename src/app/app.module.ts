@@ -29,6 +29,7 @@ import { OrderPipe } from './views/experience/orderby.pipe';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BacklogComponent } from './components/backlog/backlog.component';
 import { MatTableModule } from '@angular/material/table';
+import { TagsComponent } from './views/experience/tags/tags.component';
 
 @NgModule({
   imports: [
@@ -56,7 +57,7 @@ import { MatTableModule } from '@angular/material/table';
     RhombusShellModule.forRoot({
       applicationInfo: {
         name: 'Doug Williamson',
-        version: '1.0.0-beta.14',
+        version: '1.0.0-beta.15',
         logoUrl: undefined,
         logoLetters: 'DW',
         twitterUrl: 'https://twitter.com/Rhombus_TV',
@@ -81,6 +82,8 @@ import { MatTableModule } from '@angular/material/table';
     OrderPipe,
 
     BacklogComponent,
+
+    TagsComponent,
   ],
   providers: [
     AngularFirestore,
