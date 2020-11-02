@@ -1,21 +1,21 @@
 <div class="biography__wrapper" fxLayout="column" fxLayoutAlign="start stretch" fxFill>
-    <mat-card style="margin-bottom: 16px;" fxFlex>
+    <mat-card fxFlex>
         <mat-card-header class="biography__wrapper-header">
             <img mat-card-avatar *ngIf="media.isActive('gt-xs')" [src]="'./assets/images/doug_williamson.jpg'" class="biography__wrapper-image">
             <mat-card-title class="biography__wrapper-title">Douglas Matthew Williamson</mat-card-title>
             <mat-card-subtitle class="biography__wrapper-subtitle">Charleston, SC</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-            <div fxLayout="column" fxLayoutAlign="start stretch" fxFlexFill>
+            <div fxLayout="column" fxLayoutAlign="start stretch" fxFill>
                 <ng-container *ngFor="let section of biography">
-                    <mat-card fxFlex>
+                    <mat-card style="padding: 0;">
                         <mat-card-header>
                             <mat-card-title>{{ section.description }}</mat-card-title>
                         </mat-card-header>
                         <mat-card-content fxLayout="column">
-                            <div class="experience__wrapper-job-card-content" fxFlex>
-                                {{ section.text}}
-                            </div>
+                            <ng-container *ngFor="let paragraph of section.paragraphs">
+                                <div style="margin: 8px 16px;">{{ paragraph }}</div>
+                            </ng-container>
                         </mat-card-content>
                     </mat-card>
                 </ng-container>
