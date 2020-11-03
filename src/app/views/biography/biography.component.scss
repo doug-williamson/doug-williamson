@@ -1,12 +1,11 @@
-.biography__wrapper {
+.experience__wrapper {
     padding: 16px;
 
     mat-card-header {
-        padding-bottom: 0 !important;
+        // padding-bottom: 0 !important;
     }
 
     &-header {
-        margin: 16px;
         padding-bottom: 16px;
     }
 
@@ -59,8 +58,4 @@
 
 button {
     margin: 0 4px;
-}
-
-.biography__header__card {
-    margin: 16px 16px 8px 16px;
 }
