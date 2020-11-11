@@ -1,6 +1,6 @@
 <div fxLayout="column" fxLayoutAlign="start stretch" fxFill>
     <ng-container *ngIf="(dynastyYears$ | async) as years">
-        <mat-accordion class="example-headers-align" multi>
+        <mat-accordion>
             <mat-expansion-panel *ngFor="let year of years" expanded>
                 <mat-expansion-panel-header>
                     <mat-panel-title>

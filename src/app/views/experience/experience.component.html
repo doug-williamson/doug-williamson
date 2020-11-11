@@ -28,37 +28,12 @@
                     {{ job.description }}
                   </div>
                   <app-tags [jobId]="job.id"></app-tags>
-                  <!-- <div fxHide.gt-xs fxLayout="column">
-                    <ng-container *ngFor="let attribute of job.tags">
-                      <ng-container *ngIf="attribute.type; else noAttributeType">
-                        <button mat-raised-button (click)="goToLink(attribute.url)" color="{{ attribute.type }}">{{ attribute.name }}</button>
-                      </ng-container>
-                      <ng-template #noAttributeType>
-                        <button mat-raised-button (click)="goToLink(attribute.url)">{{ attribute.name }}</button>
-                      </ng-template>
-                    </ng-container>
-                  </div>
-                  <div fxHide.xs>
-                    <ng-container *ngFor="let attribute of job.attributes">
-                      <ng-container *ngIf="attribute.type; else noAttributeType">
-                        <button mat-raised-button (click)="goToLink(attribute.url)" color="{{ attribute.type }}">{{ attribute.name }}</button>
-                      </ng-container>
-                      <ng-template #noAttributeType>
-                        <button mat-raised-button (click)="goToLink(attribute.url)">{{ attribute.name }}</button>
-                      </ng-template>
-                    </ng-container>
-                  </div> -->
-          
                 </mat-expansion-panel>  
               </ng-container>
             </ng-container>
-      
           </mat-accordion>
         </div>
-        
       </mat-card-content>
     </mat-card>
-    
   </ng-container>
-  
 </div>

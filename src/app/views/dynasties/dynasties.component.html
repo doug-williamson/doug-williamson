@@ -1,10 +1,10 @@
 <div class="dynasties__wrapper" fxLayout fxLayoutAlign="start stretch" fxFlex>
 
     <mat-card fxFlex>
-        <mat-card-header class="experience__wrapper-header">
-            <img mat-card-avatar *ngIf="media.isActive('gt-xs')" [src]="'./assets/images/sub_logo.png'" class="experience__wrapper-image">
-            <mat-card-title class="experience__wrapper-title">Standard Sliders</mat-card-title>
-            <mat-card-subtitle class="experience__wrapper-subtitle">Game: NCAA Football 14</mat-card-subtitle>
+        <mat-card-header class="dynasties__wrapper-header">
+            <img mat-card-avatar *ngIf="media.isActive('gt-xs')" [src]="'./assets/images/sub_logo.png'" class="dynasties__wrapper-image">
+            <mat-card-title class="dynasties__wrapper-title">Standard Sliders</mat-card-title>
+            <mat-card-subtitle class="dynasties__wrapper-subtitle">Game: NCAA Football 14</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
             <app-dynasty [dynasty]="_selectedDynasty" fxFlex></app-dynasty>
