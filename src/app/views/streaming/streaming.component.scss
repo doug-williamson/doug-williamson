@@ -1,10 +1,6 @@
-.streaming__video {
-    margin: 16px 8px 16px 0;
-}
+.streaming_
 
-.streaming__chat {
-    margin: 16px 0 16px 8px;
-}
+.streaming
 
 .streaming__wrapper {
     padding: 16px;
@@ -25,102 +21,11 @@
         font-size: 18px;
     }
 
-    &-summary {
-        padding-bottom: 0;
+    &-video {
+        margin: 16px 8px 16px 0;
     }
 
-    &-job-card {
-        margin: 16px;
-        padding: 0;
-
-        &-content {
-            padding: 16px;
-        }
+    &-chat {
+        margin: 16px 0 16px 8px;
     }
-
-    &-job-wrapper {
-        overflow-y: auto;
-        margin-top: 16px;
-    }
-
-    &-description {
-        border: 1px solid black;
-    }
-}
-
-.mat-expansion-panel-header-description {
-    direction: rtl;
-}
-
-.mat-expansion-panel-header-description, .mat-expansion-panel-header-title {
-    margin-right: 24px;
-}
-
-button {
-    margin: 0 4px;
-}
-.streaming__iframe {
-    // margin-top: 16px;
-    // padding-top: 16px;
-}
-
-
-
-
-.experience__wrapper {
-    padding: 16px;
-
-    &-header {
-        padding-bottom: 16px;
-    }
-
-    &-image {
-        background-position: center;
-        background-size: cover;
-        width: 100px;
-        height: 100px;
-    }
-
-    &-title {
-        font-size: 24px;
-        margin: 20px 0 16px;
-    }
-    
-    &-subtitle {
-        font-size: 18px;
-    }
-
-    &-summary {
-        padding-bottom: 0;
-    }
-
-    &-job-card {
-        margin: 16px;
-        padding: 0;
-
-        &-content {
-            padding: 16px;
-        }
-    }
-
-    &-job-wrapper {
-        overflow-y: auto;
-        margin-top: 16px;
-    }
-
-    &-description {
-        border: 1px solid black;
-    }
-}
-
-.mat-expansion-panel-header-description {
-    direction: rtl;
-}
-
-.mat-expansion-panel-header-description, .mat-expansion-panel-header-title {
-    margin-right: 24px;
-}
-
-button {
-    margin: 0 4px;
 }

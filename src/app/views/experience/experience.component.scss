@@ -20,38 +20,4 @@
     &-subtitle {
         font-size: 18px;
     }
-
-    &-summary {
-        padding-bottom: 0;
-    }
-
-    &-job-card {
-        margin: 16px;
-        padding: 0;
-
-        &-content {
-            padding: 16px;
-        }
-    }
-
-    &-job-wrapper {
-        overflow-y: auto;
-        margin-top: 16px;
-    }
-
-    &-description {
-        border: 1px solid black;
-    }
-}
-
-.mat-expansion-panel-header-description {
-    direction: rtl;
-}
-
-.mat-expansion-panel-header-description, .mat-expansion-panel-header-title {
-    margin-right: 24px;
-}
-
-button {
-    margin: 0 4px;
 }
