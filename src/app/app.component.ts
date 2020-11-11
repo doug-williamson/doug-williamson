@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { RhombusShellNavItem, RhombusShellNavEntry } from '@dougwilliamson/rhombus-shell';
+import { RhombusShellNavEntry } from '@dougwilliamson/rhombus-shell';
 import { RhombusShellThemeService } from '@dougwilliamson/rhombus-shell';
 
 @Component({
@@ -14,6 +14,10 @@ export class AppComponent implements OnInit{
   title = 'Doug Williamson';
 
   navItems: RhombusShellNavEntry[] = [
+    {
+      name: 'Home',
+      route: 'home',
+    },
     {
       name: "Doug's Blog",
       route: 'posts',
