@@ -4,6 +4,7 @@ export interface IDynastyWeek {
     opponent: string;
     yourScore: number;
     theirScore: number;
+    link: string;
 }
 
 export interface IDynastyYear {

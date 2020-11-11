@@ -7,11 +7,15 @@ All notable changes to doug-williamson will be documented in this location. See 
 https://dougwilliamson.space
 
 <a name="1.0.0-beta.16"></a>
-# 1.0.0-beta.15 (2020-11-10)
+# 1.0.0-beta.16 (2020-11-11)
 
 ### Features
+* Posts: separated collection/document into separate routes
+* Biography: changed paragraph text to paragraph array
+* Dynasties: added link button for IDynastyWeek, Firebase
 
-### Bug Fixes
+### BREAKING CHANGES
+* rhombus-shell: updated wrapper layout, truncated selectors (1.0.0-beta.33)
 
 <a name="1.0.0-beta.15"></a>
 # 1.0.0-beta.15 (2020-11-02)
