@@ -1,48 +1,53 @@
-<mat-card>
-    <mat-card-header>
-        <mat-card-title>Backlog</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-        <table mat-table [dataSource]="backlog" fxFlex>
+<div fxLayout="column" fxLayoutAlign="start stretch" fxFlex>
+    <mat-card fxFlex>
+        <mat-card-header>
+            <mat-card-title>Backlog</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="backlog__table-container" fxFlex>
+                <table mat-table [dataSource]="backlog" fxFlex>
+                
+                    <!-- Status Column -->
+                    <ng-container matColumnDef="status">
+                        <th mat-header-cell *matHeaderCellDef></th>
+                        <td mat-cell *matCellDef="let element">
+                            <ng-container [ngSwitch]="element.status">
+                                <ng-container *ngSwitchCase="1">
+        
+                                </ng-container>
+                                <ng-container *ngSwitchCase="2">
+                                    <mat-icon color="accent">hourglass_empty</mat-icon>
+                                </ng-container>
+                                <ng-container *ngSwitchCase="3">
+                                    <mat-icon color="primary">done</mat-icon>
+                                </ng-container>
+                            </ng-container>
+                        </td>
+                    </ng-container>
+        
+                    <!-- Text Column-->
+                    <ng-container matColumnDef="text">
+                        <th mat-header-cell *matHeaderCellDef> Name </th>
+                        <td mat-cell *matCellDef="let element">
+                            <ng-container [ngSwitch]="element.status">
+                                <ng-container *ngSwitchCase="1">
+                                    <span>{{ element.text }}</span>
+                                </ng-container>
+                                <ng-container *ngSwitchCase="2">
+                                    <span>{{ element.text }}</span>
+                                </ng-container>
+                                <ng-container *ngSwitchCase="3">
+                                    <i><s><span>{{ element.text }}</span></s></i>
+                                </ng-container>
+                            </ng-container>
+                        </td>
+                    </ng-container>
             
-            <!-- Status Column -->
-            <ng-container matColumnDef="status">
-                <th mat-header-cell *matHeaderCellDef></th>
-                <td mat-cell *matCellDef="let element">
-                    <ng-container [ngSwitch]="element.status">
-                        <ng-container *ngSwitchCase="1">
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+            </div>
 
-                        </ng-container>
-                        <ng-container *ngSwitchCase="2">
-                            <mat-icon color="accent">hourglass_empty</mat-icon>
-                        </ng-container>
-                        <ng-container *ngSwitchCase="3">
-                            <mat-icon color="primary">done</mat-icon>
-                        </ng-container>
-                    </ng-container>
-                </td>
-            </ng-container>
-
-            <!-- Text Column-->
-            <ng-container matColumnDef="text">
-                <th mat-header-cell *matHeaderCellDef> Name </th>
-                <td mat-cell *matCellDef="let element">
-                    <ng-container [ngSwitch]="element.status">
-                        <ng-container *ngSwitchCase="1">
-                            <span>{{ element.text }}</span>
-                        </ng-container>
-                        <ng-container *ngSwitchCase="2">
-                            <span>{{ element.text }}</span>
-                        </ng-container>
-                        <ng-container *ngSwitchCase="3">
-                            <i><s><span>{{ element.text }}</span></s></i>
-                        </ng-container>
-                    </ng-container>
-                </td>
-            </ng-container>
-    
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-        </table>
-    </mat-card-content>
-  </mat-card>
+        </mat-card-content>
+      </mat-card>
+</div>

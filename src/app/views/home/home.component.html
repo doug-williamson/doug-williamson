@@ -1,4 +1,4 @@
-<div fxLayout="column" fxLayoutAlign="start stretch" fxFill>
+<div fxLayout="column" fxLayoutAlign="start stretch" fxFlex>
   <ng-container *ngIf="media.isActive('lt-sm')">
 
     <mat-accordion class="example-headers-align" hideToggle>
@@ -45,7 +45,7 @@
           </p>
         </mat-card-content>
       </mat-card>
-      <div fxLayout="row" fxLayoutAlign="start stretch" fxFlex>
+      <div fxLayout="row" fxLayoutAlign="center stretch" fxFlex>
         <app-latest-news fxFlex></app-latest-news>
         <app-backlog fxFlex="30"></app-backlog>
       </div>
