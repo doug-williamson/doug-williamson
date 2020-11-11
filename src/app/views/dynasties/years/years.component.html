@@ -42,12 +42,24 @@
                         </td>
                     </ng-container>
         
-                    <!-- Record Column -->
+                    <!-- Results Column -->
                     <ng-container matColumnDef="results">
                         <th mat-header-cell *matHeaderCellDef> Results </th>
                         <td mat-cell *matCellDef="let element" > 
                             <ng-container *ngIf="element.ourScore > 0 || element.theirScore > 0">
                                 {{ element.ourScore }} - {{ element.theirScore }}
+                            </ng-container>
+                        </td>
+                    </ng-container>
+
+                    <!-- Link Column -->
+                    <ng-container matColumnDef="link">
+                        <th mat-header-cell *matHeaderCellDef></th>
+                        <td mat-cell *matCellDef="let element" > 
+                            <ng-container *ngIf="element.link">
+                                <button mat-icon-button (click)="goToLink(element.link)">
+                                    <mat-icon>theaters</mat-icon>
+                                </button>
                             </ng-container>
                         </td>
                     </ng-container>

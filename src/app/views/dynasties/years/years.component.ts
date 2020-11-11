@@ -19,7 +19,7 @@ import { IDynastyWeek, IDynastyYear } from '../dynasty/dynasty';
 })
 export class YearsComponent implements OnInit {
 
-  displayedColumns: string[] = ['week', 'home', 'opponent', 'results'];
+  displayedColumns: string[] = ['week', 'home', 'opponent', 'results', 'link'];
 
   @Input()
   years: IDynastyYear[] = undefined;
@@ -35,6 +35,10 @@ export class YearsComponent implements OnInit {
     this.dynastiesService.getDynastyWeeks$().subscribe(data => {
       this.dynastyWeeks = data as IDynastyWeek[];
     })
+  }
+
+  goToLink(url: string) {
+    window.open(url, '_blank');
   }
 
 }
