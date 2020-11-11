@@ -6,14 +6,15 @@ All notable changes to doug-williamson will be documented in this location. See 
 
 https://dougwilliamson.space
 
+<a name="1.0.0-beta.16"></a>
+# 1.0.0-beta.15 (2020-11-10)
+
+### Features
+
+### Bug Fixes
+
 <a name="1.0.0-beta.15"></a>
 # 1.0.0-beta.15 (2020-11-02)
-
-
-### Breaking Changes
-* Contact: moved text to Firebase service, requiring collection/document
-* Donate: moved text to Firebase service, requiring collection/document
-* Latest News: moved to Firebase service, requiring collection/document
 
 ### Features
 * Biography: moved About Me/Website to Biography card content
@@ -21,6 +22,11 @@ https://dougwilliamson.space
 
 ### Bug Fixes
 * rhombus-shell: collapsed sidenav for viewports < XL
+
+### Breaking Changes
+* Contact: moved text to Firebase service, requiring collection/document
+* Donate: moved text to Firebase service, requiring collection/document
+* Latest News: moved to Firebase service, requiring collection/document
 
 <a name="1.0.0-beta.14"></a>
 # 1.0.0-beta.14 (2020-10-28)
