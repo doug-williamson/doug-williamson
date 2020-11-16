@@ -24,7 +24,7 @@
     "@angular/platform-browser-dynamic": "^10.2.2",
     "@angular/router": "^10.2.2",
     "@dougwilliamson/rhombus": "^1.0.0-beta.5",
-    "@dougwilliamson/rhombus-shell": "^1.0.0-beta.33",
+    "@dougwilliamson/rhombus-shell": "^1.0.0-beta.35",
     "firebase": "^7.8.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",

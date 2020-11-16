@@ -1,22 +1,16 @@
-<div fxLayout="column" fxLayoutAlign="start stretch" fxFill class="streaming__wrapper">
-  <mat-card>
-    <mat-card-header>
-        <img mat-card-avatar *ngIf="media.isActive('gt-xs')" [src]="'./assets/images/sub_logo.png'" class="streaming__wrapper-image">
-        <mat-card-title class="streaming__wrapper-title">Rhombus_TV</mat-card-title>
-        <mat-card-subtitle class="streaming__wrapper-subtitle">Twitch Affiliate</mat-card-subtitle>
-    </mat-card-header>
-  </mat-card>
-  <div class="streaming__iframe" fxLayoutAlign="center stretch" fxFlex>
-    <iframe fxFlex class="streaming__wrapper-video"
-      src="https://player.twitch.tv/?channel=rhombus_tv&parent=dougwilliamson.space&muted=true"
-      frameborder="0"
-      scrolling="no"
-      allowfullscreen="true">
-    </iframe>
-    <iframe frameborder="0" class="streaming__wrapper-chat"
-      scrolling="no"
-      id="chat_embed"
-      src="https://www.twitch.tv/embed/rhombus_tv/chat?parent=dougwilliamson.space&muted=true">
-    </iframe>
-  </div>
+<div fxLayout fxLayout.xs="column" fxLayoutAlign="start stretch" fxFill class="streaming__wrapper" *ngIf="streamData">
+  <iframe fxFlex="70" fxFlex.xs="60"
+	class="streaming__wrapper-iframe"
+	[src]="video_url"
+	frameborder="0"
+	scrolling="no"
+	allowfullscreen="true">
+  </iframe>
+  <iframe fxFlex="30" fxFlex.xs="40"
+    class="streaming__wrapper-iframe"
+    frameborder="0"
+    scrolling="no"
+    id="chat_embed"
+    [src]="chat_url">
+  </iframe>
 </div>
