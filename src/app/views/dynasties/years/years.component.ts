@@ -1,6 +1,7 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Component, Input, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { MediaObserver } from '@angular/flex-layout';
 import { Observable } from 'rxjs/internal/Observable';
 import { DynastiesService } from '../dynasties.service';
 import { IDynastyWeek, IDynastyYear } from '../dynasty/dynasty';
@@ -19,7 +20,9 @@ import { IDynastyWeek, IDynastyYear } from '../dynasty/dynasty';
 })
 export class YearsComponent implements OnInit {
 
-  displayedColumns: string[] = ['week', 'home', 'opponent', 'results', 'link'];
+  displayedColumns: string[] = ['week', 'opponent', 'home', 'result', 'description', 'link'];
+  displayedColumnsMobile: string[] = ['week', 'home', 'opponent', 'result'];
+  expandedWeek: IDynastyWeek | null;
 
   @Input()
   years: IDynastyYear[] = undefined;
@@ -28,16 +31,17 @@ export class YearsComponent implements OnInit {
   dynastyYears$: Observable<IDynastyYear[]>;
   dynastyWeeks: IDynastyWeek[];
 
-  constructor(private dynastiesService: DynastiesService) {}
+  constructor(public media: MediaObserver, private dynastiesService: DynastiesService) {}
 
   ngOnInit(): void {
     this.dynastyYears$ = this.dynastiesService.getDynastyMarkYears$();
-    this.dynastiesService.getDynastyWeeks$().subscribe(data => {
+    this.dynastiesService.getIDynastyWeeks$().subscribe(data => {
       this.dynastyWeeks = data as IDynastyWeek[];
     })
   }
 
   goToLink(url: string) {
+
     window.open(url, '_blank');
   }
 

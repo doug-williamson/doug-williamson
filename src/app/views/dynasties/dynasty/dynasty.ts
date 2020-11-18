@@ -1,10 +1,12 @@
 export interface IDynastyWeek {
-    id: number;
-    isHome: boolean;
+    week: number;
+    home: boolean;
     opponent: string;
-    yourScore: number;
+    ourScore: number;
     theirScore: number;
     link: string;
+    result: string;
+    description: string;
 }
 
 export interface IDynastyYear {

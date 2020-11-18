@@ -3,7 +3,7 @@ import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/fire
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { IPost } from '../posts/post/post';
-import { IDynasty, IDynastyMark, IDynastyWeek, IDynastyYear } from './dynasty/dynasty';
+import { IDynastyWeek, IDynasty, IDynastyMark, IDynastyYear } from './dynasty/dynasty';
 
 @Injectable({
   providedIn: 'root'
@@ -53,13 +53,18 @@ export class DynastiesService {
       }))); 
   }
 
-  getDynastyWeeks$(): Observable<IDynastyWeek[]> {
+  getIDynastyWeeks$(): Observable<IDynastyWeek[]> {
     this.dynastyMarkYearWeeksCollection = this.firestore.collection<IDynasty>('dynasties').doc('3WrQ17i2oOpnleoh7nWF').collection<IDynastyMark>('mark').doc('6knwYblmlhEwUCHbOzfd').collection<IDynastyYear>('years').doc('odCZwgaiIYLfrdXaAfFm').collection<IDynastyWeek>('weeks', ref => ref.orderBy('week'));
   
     return this.dynastyMarkYearWeeksCollection.snapshotChanges().pipe(
       map(actions => actions.map(a => {
         const data = a.payload.doc.data() as IDynastyWeek;
         const id = a.payload.doc.id;
+
+        if (data.ourScore > 0 || data.theirScore > 0) {
+            data.result = (data.ourScore > data.theirScore) ? 'W' : 'L';
+            data.description = 'Final Score: ' + data.ourScore + ' - ' + data.theirScore
+        }
 
         return { id, ...data };
       }))); 
