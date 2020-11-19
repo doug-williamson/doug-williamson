@@ -21,7 +21,7 @@ import { IDynastyWeek, IDynastyYear } from '../dynasty/dynasty';
 export class YearsComponent implements OnInit {
 
   displayedColumns: string[] = ['week', 'opponent', 'home', 'result', 'description', 'link'];
-  displayedColumnsMobile: string[] = ['week', 'home', 'opponent', 'result'];
+  displayedColumnsMobile: string[] = ['week', 'opponent', 'home', 'result'];
   expandedWeek: IDynastyWeek | null;
 
   @Input()
