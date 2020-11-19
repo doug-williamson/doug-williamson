@@ -57,7 +57,7 @@ import { TagsComponent } from './views/experience/tags/tags.component';
     RhombusShellModule.forRoot({
       applicationInfo: {
         name: 'Doug Williamson',
-        version: '1.0.0-beta.16',
+        version: '1.0.0-beta.17',
         logoUrl: undefined,
         logoLetters: 'DW',
         twitterUrl: 'https://twitter.com/Rhombus_TV',

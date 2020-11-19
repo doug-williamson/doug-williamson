@@ -1,31 +1,10 @@
-.streaming_
-
-.streaming
-
 .streaming__wrapper {
-    padding: 16px;
+    max-height: 100% !important;
 
-    &-image {
-        background-position: center;
-        background-size: cover;
-        width: 100px;
-        height: 100px;
-    }
+    // margin: 16px;
+    overflow: auto;
 
-    &-title {
-        font-size: 24px;
-        margin: 20px 0 16px;
-    }
-    
-    &-subtitle {
-        font-size: 18px;
-    }
-
-    &-video {
-        margin: 16px 8px 16px 0;
-    }
-
-    &-chat {
-        margin: 16px 0 16px 8px;
+    &-iframe {
+        // margin: 8px;
     }
 }

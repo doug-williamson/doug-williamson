@@ -6,6 +6,15 @@ All notable changes to doug-williamson will be documented in this location. See 
 
 https://dougwilliamson.space
 
+<a name="1.0.0-beta.17"></a>
+# 1.0.0-beta.17 (2020-11-19)
+
+### Features
+* Streaming: cleaned up view (mobile, flex)
+* Dynasty: cleaned up view (mobile)
+* Biography: cleaned up view (mobile)
+* Home: cleaned up view (mobile)
+
 <a name="1.0.0-beta.16"></a>
 # 1.0.0-beta.16 (2020-11-11)
 
