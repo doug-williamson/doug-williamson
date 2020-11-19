@@ -8,7 +8,7 @@ import { MediaObserver } from '@angular/flex-layout';
 })
 export class HomeComponent implements OnInit {
 
-  step = 0;
+  step = 1;
 
   constructor(public media: MediaObserver) { }
 
